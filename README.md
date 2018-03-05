@@ -31,7 +31,8 @@ php bin/console server:run
 Accéder ensuite à la page de login:
 http://localhost/Omdb_Api_Vertin_Go_Website/web/app_dev.php/login
 
-Pour importer une liste de films via un fichier csv il faut créer un fichier csv et écrire sur chaque ligne add:le_nom_de_votre_film
+Pour importer une liste de films via un fichier csv il faut créer un fichier csv et écrire sur chaque ligne add:le_nom_de_votre_film (Vous pouvez trouver un exemple de ficier csv à la racine du projet: csv_omdbapi.csv)
+
 ======================================================================================================
 
 Pour générer un crud sur une entité:
