@@ -27,7 +27,7 @@ class DefaultController extends Controller
         $row = 0;
        // $path=$this->get('kernel')->getRootDir(); // Représente la ligne
         // Import du fichier CSV 
-        if (($handle = fopen("/var/www/html/projet/src/AppBundle/Resources/file.csv", "r")) !== FALSE) { // Lecture du fichier, à adapter
+        if (($handle = fopen("/var/www/html/Omdb_Api_Vertin_Go_Website/src/AppBundle/Resources/file.csv", "r")) !== FALSE) { // Lecture du fichier, à adapter
             while (($data = fgetcsv($handle, 1000, ";")) !== FALSE) { // Eléments séparés par un point-virgule, à modifier si necessaire
                 $num = count($data); // Nombre d'éléments sur la ligne traitée
                 $row++;

@@ -2,6 +2,13 @@ Projet front + api omdbapi
 ======================================================================================================
 L'idée serait de gérer une plateforme permettant aux utilisateurs de se créer une liste de films favoris à partir d'une barre de recherche mais également de pouvoir en visualiser une bande annonce, donner un avis, et exporter au format pdf cette liste!
 
+<p align="center">
+<a href="https://www.youtube.com/channel/UC2g_-ipVjit6ZlACPWG4JvA?sub_confirmation=1"><img src="https://raw.githubusercontent.com/vertingo/Omdb_Api_Vertin_Go_Website/master/images/Omdb_Api_Vertin_Go_Website4.png" width="400" height="250"/></a>
+  <a href="https://www.youtube.com/channel/UC2g_-ipVjit6ZlACPWG4JvA?sub_confirmation=1"><img src="https://raw.githubusercontent.com/vertingo/Omdb_Api_Vertin_Go_Website/master/images/Omdb_Api_Vertin_Go_Website.png" width="400" height="250"/></a>
+  <a href="https://www.youtube.com/channel/UC2g_-ipVjit6ZlACPWG4JvA?sub_confirmation=1"><img src="https://raw.githubusercontent.com/vertingo/Omdb_Api_Vertin_Go_Website/master/images/Omdb_Api_Vertin_Go_Website2.png" width="400" height="250"/></a>
+  <a href="https://www.youtube.com/channel/UC2g_-ipVjit6ZlACPWG4JvA?sub_confirmation=1"><img src="https://raw.githubusercontent.com/vertingo/Omdb_Api_Vertin_Go_Website/master/images/Omdb_Api_Vertin_Go_Website3.png" width="400" height="250"/></a>
+</p>
+
 Prérequis avant de taper les lignes de commandes suivantes:
 Placer le contenu du projet dans le dossier htdocs d'un simulateur de server local tel que xampp!
 Veillez à ce que les champs de la base de donnée du fichier app/config/parameters soient renseignées
@@ -23,6 +30,8 @@ php bin/console server:run
 
 Accéder ensuite à la page de login:
 http://localhost/Omdb_Api_Vertin_Go_Website/web/app_dev.php/login
+
+Pour importer une liste de films via un fichier csv il faut créer un fichier csv et écrire sur chaque ligne add:le_nom_de_votre_film
 ======================================================================================================
 
 Pour générer un crud sur une entité:
