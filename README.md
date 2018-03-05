@@ -7,9 +7,9 @@ L'idée serait de gérer une plateforme permettant aux utilisateurs de se créer
 <br>
   <a href="https://www.youtube.com/channel/UC2g_-ipVjit6ZlACPWG4JvA?sub_confirmation=1"><img src="https://raw.githubusercontent.com/vertingo/Omdb_Api_Vertin_Go_Website/master/images/Omdb_Api_Vertin_Go_Website.png" width="1000" height="400"/></a>
 <br>
-  <a href="https://www.youtube.com/channel/UC2g_-ipVjit6ZlACPWG4JvA?sub_confirmation=1"><img src="https://raw.githubusercontent.com/vertingo/Omdb_Api_Vertin_Go_Website/master/images/Omdb_Api_Vertin_Go_Website2.png" width="1000" height="400"/></a>
-<br>
-  <a href="https://www.youtube.com/channel/UC2g_-ipVjit6ZlACPWG4JvA?sub_confirmation=1"><img src="https://raw.githubusercontent.com/vertingo/Omdb_Api_Vertin_Go_Website/master/images/Omdb_Api_Vertin_Go_Website3.png" width="1000" height="400"/></a>
+  <a href="https://www.youtube.com/channel/UC2g_-ipVjit6ZlACPWG4JvA?sub_confirmation=1"><img src="https://raw.githubusercontent.com/vertingo/Omdb_Api_Vertin_Go_Website/master/images/Omdb_Api_Vertin_Go_Website2.png" width="400" height="200"/></a>
+
+  <a href="https://www.youtube.com/channel/UC2g_-ipVjit6ZlACPWG4JvA?sub_confirmation=1"><img src="https://raw.githubusercontent.com/vertingo/Omdb_Api_Vertin_Go_Website/master/images/Omdb_Api_Vertin_Go_Website3.png" width="400" height="200"/></a>
 </p>
 
 Prérequis avant de taper les lignes de commandes suivantes:
