@@ -1,0 +1,34 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>test list</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Titre</th>
+                <th>Annee</th>
+                <th>Id</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for test in tests %}
+            <tr>
+                <td><a href="{{ path('test_show', { 'id': test.id }) }}">{{ test.titre }}</a></td>
+                <td>{{ test.annee }}</td>
+                <td>{{ test.id }}</td>
+                <td>
+                    <ul>
+                        <li>
+                            <a href="{{ path('test_show', { 'id': test.id }) }}">show</a>
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    
+{% endblock %}

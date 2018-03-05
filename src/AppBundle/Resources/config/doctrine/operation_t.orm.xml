@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping http://doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+  <entity repository-class="AppBundle\Repository\operation_tRepository" name="AppBundle\Entity\operation_t">
+    <id name="id" type="integer" column="id">
+      <generator strategy="AUTO"/>
+    </id>
+    <field name="siteF" type="integer" column="site_f"/>
+    <field name="technoF" type="string" column="techno_f" length="255" nullable="true"/>
+    <field name="dateF" type="datetime" column="date_f" nullable="true"/>
+    <field name="flag4gF" type="boolean" column="flag_4g_f"/>
+  </entity>
+</doctrine-mapping>

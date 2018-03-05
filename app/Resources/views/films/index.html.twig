@@ -1,0 +1,343 @@
+{% extends 'PetkoparaCrudGeneratorBundle::base.html.twig' %}
+
+{% block title %}
+{{ parent() }} - film index
+{% endblock %}
+
+{% block body %}
+
+
+<div class="row">
+    <div class="col-md-12">
+        <div class="page-header">
+            <h2><a href="{{ path('films') }}">Films OmdbApi par Vertin Go Website! Abonne toi si tu aimes ==></a> <div id="___ytsubscribe_0" style="text-indent: 0px; margin: 0px; padding: 0px; background-color: transparent; border-style: none; float: none; line-height: normal; font-size: 1px; vertical-align: baseline; display: inline-block; width: 168px; height: 48px; background-position: initial initial; background-repeat: initial initial;"><iframe frameborder="0" hspace="0" marginheight="0" marginwidth="0" scrolling="no" style="position: static; top: 0px; width: 168px; margin: 0px; border-style: none; left: 0px; visibility: visible; height: 48px;" tabindex="0" vspace="0" width="100%" id="I0_1480693990910" name="I0_1480693990910" src="https://www.youtube.com/subscribe_embed?usegapi=1&channelid=UC2g_-ipVjit6ZlACPWG4JvA&layout=full&count=false&origin=http%3A%2F%2Fvertin-go.com&gsrc=3p&ic=1&jsh=m%3B%2F_%2Fscs%2Fapps-static%2F_%2Fjs%2Fk%3Doz.gapi.en_US.DCqkg4_f1cE.O%2Fm%3D__features__%2Fam%3DAQ%2Frt%3Dj%2Fd%3D1%2Frs%3DAGLTcCN29Itx_77YsW7KCcAVebosjZAOGA#_methods=onPlusOne%2C_ready%2C_close%2C_open%2C_resizeMe%2C_renderstart%2Concircled%2Cdrefresh%2Cerefresh%2Conload&id=I0_1480693990910&parent=http%3A%2F%2Fvertin-go.com&pfname=&rpctoken=32231505" data-gapiattached="true"></iframe></div><div id="ytsubscribe-events-log"></div></h2>
+        </div>
+    </div>       
+
+<!-- FILTERING -->
+<div class="col-md-12">
+    <div  id="filters" class="collapse">
+
+        <form class="well" action="{{ path('films') }}" method="get" >
+            <div class="row">
+                 
+                    <div class="col-md-6">{{ form_row(filterForm.titreFilm) }}</div>
+
+                 
+                    <div class="col-md-6">{{ form_row(filterForm.annee) }}</div>
+
+                 
+                    <div class="col-md-6">{{ form_row(filterForm.classification) }}</div>
+
+                 
+                    <div class="col-md-6">{{ form_row(filterForm.sortie) }}</div>
+
+                 
+                    <div class="col-md-6">{{ form_row(filterForm.duree) }}</div>
+
+                 
+                    <div class="col-md-6">{{ form_row(filterForm.genre) }}</div>
+
+                 
+                    <div class="col-md-6">{{ form_row(filterForm.directeur) }}</div>
+
+                 
+                    <div class="col-md-6">{{ form_row(filterForm.scenariste) }}</div>
+
+                 
+                    <div class="col-md-6">{{ form_row(filterForm.acteurs) }}</div>
+
+                 
+                    <div class="col-md-6">{{ form_row(filterForm.synopsis) }}</div>
+
+                 
+                    <div class="col-md-6">{{ form_row(filterForm.langue) }}</div>
+
+                 
+                    <div class="col-md-6">{{ form_row(filterForm.nationalite) }}</div>
+
+                 
+                    <div class="col-md-6">{{ form_row(filterForm.recompense) }}</div>
+
+                 
+                    <div class="col-md-6">{{ form_row(filterForm.illustration) }}</div>
+
+                 
+                    <div class="col-md-6">{{ form_row(filterForm.notations) }}</div>
+
+                 
+                    <div class="col-md-6">{{ form_row(filterForm.metascore) }}</div>
+
+                 
+                    <div class="col-md-6">{{ form_row(filterForm.imdbNotation) }}</div>
+
+                 
+                    <div class="col-md-6">{{ form_row(filterForm.imdbVotes) }}</div>
+
+                 
+                    <div class="col-md-6">{{ form_row(filterForm.imdbId) }}</div>
+
+                 
+                    <div class="col-md-6">{{ form_row(filterForm.type) }}</div>
+
+                 
+                    <div class="col-md-6">{{ form_row(filterForm.dvd) }}</div>
+
+                 
+                    <div class="col-md-6">{{ form_row(filterForm.boxoffice) }}</div>
+
+                 
+                    <div class="col-md-6">{{ form_row(filterForm.production) }}</div>
+
+                 
+                    <div class="col-md-6">{{ form_row(filterForm.website) }}</div>
+
+                 
+                    <div class="col-md-6">{{ form_row(filterForm.reponse) }}</div>
+
+                 
+                    <div class="col-md-6">{{ form_row(filterForm.id) }}</div>
+
+                                <div class="col-md-6">
+                    {{ form_rest(filterForm) }}
+                </div>
+                <div class="col-md-12">
+                    <div class="form-group">
+                        <button type="submit" class="btn btn-warning" name="filter_action" value="filter"> <span class="glyphicon glyphicon-filter" aria-hidden="true"></span> Filter</button>
+                        <button type="submit" class="btn btn-default" name="filter_action" value="reset"><span class="glyphicon glyphicon-minus" aria-hidden="true"></span> Reset</button>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+<!-- END FILTERING -->
+
+
+<div class="col-md-3 pull-left">
+        
+    <!-- PAGE SIZE -->
+    <div class="pagination form-inline ">
+        <select class = "form-control"  onchange="window.location = this.value" >
+            <option value='{{ path('films', app.request.query.all|merge({'pcg_show': '10'})) }}' {% if app.request.get('pcg_show') == 10 %} selected {% endif %}>10</option>
+            <option value='{{ path('films', app.request.query.all|merge({'pcg_show': '20'})) }}' {% if app.request.get('pcg_show') == 20 %} selected {% endif %}>20</option>
+            <option value='{{ path('films', app.request.query.all|merge({'pcg_show': '50'})) }}' {% if app.request.get('pcg_show') == 50 %} selected {% endif %}>50</option>
+            <option value='{{ path('films', app.request.query.all|merge({'pcg_show': '100'})) }}' {% if app.request.get('pcg_show') == 100 %} selected {% endif %}>100</option>
+            <option value='{{ path('films', app.request.query.all|merge({'pcg_show': '500'})) }}' {% if app.request.get('pcg_show') == 500 %} selected {% endif %}>500</option>
+        </select>
+    </div>
+    <!-- END PAGE SIZE -->
+
+</div>
+
+<div class="col-md-6">
+	<input id="texte_recherche" type="text"/>
+    <a class="btn btn-primary" href="{{ path('films_new') }}" style="margin-bottom:10px">
+    <span class="glyphicon glyphicon-plus" aria-hidden="true"></span> Movie
+    </a>
+</div>
+
+<div class="col-md-3">
+        <a href="{{ path('Csv') }}" style="margin-left: 10px;"  class="btn btn-primary h3 pull-right">
+          <span class=" glyphicon glyphicon-download-alt"></span> PDF export
+        </a>
+
+        <a class="btn btn-primary h3 pull-right" href="{{ path('films_new') }}" style="margin-bottom:10px">
+        <span class="glyphicon glyphicon-plus" aria-hidden="true"></span> New
+        </a>
+
+        <a class="btn btn-warning dropdown-toggle pull-right h3" style="position: relative;top: -16px;" data-toggle="collapse" data-target="#filters">
+        Filter
+        <span class="caret"></span>
+        </a>
+        
+        <a class="btn btn-primary h3 pull-right" style="margin-top: 4px;margin-right: 10px;" data-toggle="modal" data-target="#myModal">
+        <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
+        CSV import
+        </a>
+
+        
+</div>
+
+<div id="myModal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">Joindre votre fichier CSV</h4>
+    </div>
+    <div class="modal-body">
+        <form method="POST" action="{{ path('import_csv2') }}" enctype="multipart/form-data"
+        > 
+        <!-- On limite le fichier à 1Go -->
+        <input type="hidden" name="MAX_FILE_SIZE" value="1000000000">
+        <br/>
+        <div class="form-group">
+
+            <center><p><h4>Sélectionner fichier CSV : </h4></p></center>
+            <label class="col-md-4 control-label" for="csv"></label>
+            <div class="col-md-4">
+                <input id="csv" name="csv" class="input-file" type="file">
+            </div>
+        </div>
+
+        <br/><br/>
+        <center><input type="submit" name="envoyer" value="Envoyer le fichier"></center>
+    </form>
+</div>
+<div class="modal-footer">
+    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+</div>
+</div>
+
+</div>
+</div>
+
+
+    <div class="col-md-12">
+        {%- if form_errors(filterForm) %}
+        <div class="alert alert-block alert-error fade in form-errors">
+            {{ form_errors(filterForm) }}
+        </div>
+        {% endif %}
+    </div>
+
+</div> <!-- /#top -->
+
+
+<div class="row">
+    <div class="col-md-12">
+        {% for type, flashMessages in app.session.flashbag.all() %} 
+        {% for flashMessage in flashMessages %}
+        <div class="alert alert-{{ type }}">
+            {{ flashMessage|raw }}
+        </div>
+         {% endfor %} 
+         {% endfor %} 
+    </div>
+</div>
+    
+
+<div class="row">
+
+        <div class="table-responsive col-md-12">
+        <form method="POST" id="bulk_form" action="{{ path('films_bulk_action') }} ">
+            <table class="table table-striped table-hover table-bordered" cellspacing="0" cellpadding="0">
+                <thead>
+                    <tr>
+                        <th width="20px"><input type="checkbox" class="check-all" onclick="toggleAll(this)"></th>
+
+                {% import "PetkoparaCrudGeneratorBundle::macros/th_sortable.html.twig" as macros %}
+                            <th>{{macros.th_sortable('titreFilm',app.request.get('pcg_sort_col'), app.request.get('pcg_sort_order') , 'films')}}</th>
+                            <th>{{macros.th_sortable('annee',app.request.get('pcg_sort_col'), app.request.get('pcg_sort_order') , 'films')}}</th>
+                            <th>{{macros.th_sortable('classification',app.request.get('pcg_sort_col'), app.request.get('pcg_sort_order') , 'films')}}</th>
+                            <th>{{macros.th_sortable('sortie',app.request.get('pcg_sort_col'), app.request.get('pcg_sort_order') , 'films')}}</th>
+                            <th>{{macros.th_sortable('duree',app.request.get('pcg_sort_col'), app.request.get('pcg_sort_order') , 'films')}}</th>
+                            <th>{{macros.th_sortable('genre',app.request.get('pcg_sort_col'), app.request.get('pcg_sort_order') , 'films')}}</th>
+                            <th>{{macros.th_sortable('directeur',app.request.get('pcg_sort_col'), app.request.get('pcg_sort_order') , 'films')}}</th>
+                            <th>{{macros.th_sortable('scenariste',app.request.get('pcg_sort_col'), app.request.get('pcg_sort_order') , 'films')}}</th>
+                            <th>{{macros.th_sortable('acteurs',app.request.get('pcg_sort_col'), app.request.get('pcg_sort_order') , 'films')}}</th>
+                            <th>{{macros.th_sortable('synopsis',app.request.get('pcg_sort_col'), app.request.get('pcg_sort_order') , 'films')}}</th>
+                            <th>{{macros.th_sortable('langue',app.request.get('pcg_sort_col'), app.request.get('pcg_sort_order') , 'films')}}</th>
+                            <th>{{macros.th_sortable('nationalite',app.request.get('pcg_sort_col'), app.request.get('pcg_sort_order') , 'films')}}</th>
+                            <th>{{macros.th_sortable('recompense',app.request.get('pcg_sort_col'), app.request.get('pcg_sort_order') , 'films')}}</th>
+                            <th>{{macros.th_sortable('illustration',app.request.get('pcg_sort_col'), app.request.get('pcg_sort_order') , 'films')}}</th>
+                            <th>{{macros.th_sortable('notations',app.request.get('pcg_sort_col'), app.request.get('pcg_sort_order') , 'films')}}</th>
+                            <th>{{macros.th_sortable('metascore',app.request.get('pcg_sort_col'), app.request.get('pcg_sort_order') , 'films')}}</th>
+                            <th>{{macros.th_sortable('imdbNotation',app.request.get('pcg_sort_col'), app.request.get('pcg_sort_order') , 'films')}}</th>
+                            <th>{{macros.th_sortable('imdbVotes',app.request.get('pcg_sort_col'), app.request.get('pcg_sort_order') , 'films')}}</th>
+                            <th>{{macros.th_sortable('imdbId',app.request.get('pcg_sort_col'), app.request.get('pcg_sort_order') , 'films')}}</th>
+                            <th>{{macros.th_sortable('type',app.request.get('pcg_sort_col'), app.request.get('pcg_sort_order') , 'films')}}</th>
+                            <th>{{macros.th_sortable('dvd',app.request.get('pcg_sort_col'), app.request.get('pcg_sort_order') , 'films')}}</th>
+                            <th>{{macros.th_sortable('boxoffice',app.request.get('pcg_sort_col'), app.request.get('pcg_sort_order') , 'films')}}</th>
+                            <th>{{macros.th_sortable('production',app.request.get('pcg_sort_col'), app.request.get('pcg_sort_order') , 'films')}}</th>
+                            <th>{{macros.th_sortable('website',app.request.get('pcg_sort_col'), app.request.get('pcg_sort_order') , 'films')}}</th>
+                            <th>{{macros.th_sortable('reponse',app.request.get('pcg_sort_col'), app.request.get('pcg_sort_order') , 'films')}}</th>
+                            <th>{{macros.th_sortable('id',app.request.get('pcg_sort_col'), app.request.get('pcg_sort_order') , 'films')}}</th>
+    
+                       
+                        <th width = "130px">List</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for film in films %}
+                    <tr>
+                        <td><input type="checkbox" name="ids[]" onclick='bulkSubmitBtnManage();' class="check-all" value="{{film.id}}"/></td>
+                        <td><a href="{{ path('films_edit', { 'id': film.id }) }}">{{ film.titreFilm }}</a></td>
+                        <td>{{ film.annee }}</td>
+                        <td>{{ film.classification }}</td>
+                        <td>{{ film.sortie }}</td>
+                        <td>{{ film.duree }}</td>
+                        <td>{{ film.genre }}</td>
+                        <td>{{ film.directeur }}</td>
+                        <td>{{ film.scenariste }}</td>
+                        <td>{{ film.acteurs }}</td>
+                        <td>{{ film.synopsis }}</td>
+                        <td>{{ film.langue }}</td>
+                        <td>{{ film.nationalite }}</td>
+                        <td>{{ film.recompense }}</td>
+                        <td><img src={{ film.illustration }}></td>
+                        <td>{{ film.notations }}</td>
+                        <td>{{ film.metascore }}</td>
+                        <td>{{ film.imdbNotation }}</td>
+                        <td>{{ film.imdbVotes }}</td>
+                        <td>{{ film.imdbId }}</td>
+                        <td>{{ film.type }}</td>
+                        <td>{{ film.dvd }}</td>
+                        <td>{{ film.boxoffice }}</td>
+                        <td>{{ film.production }}</td>
+                        <td>{{ film.website }}</td>
+                        <td>{{ film.reponse }}</td>
+                        <td>{{ film.id }}</td>
+    
+                        <td class="actions">
+                            <a  onclick="return confirm('Are you sure!');" title="Delete" class="btn btn-danger btn-sm" href="{{ path('films_by_id_delete', { 'id': film.id}) }}">
+                                <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
+                            </a>
+                            <a title='Show' class="btn btn-info btn-sm" href="{{ path('films_show', { 'id': film.id }) }}">
+                                <span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span>
+                            </a>
+                            <a  title='Edit' class="btn btn-primary btn-sm" href="{{ path('films_edit', { 'id': film.id }) }}">
+                                <span class="glyphicon glyphicon-pencil" aria-hidden="true"></span>
+                            </a>
+                        </td>
+
+
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </form>
+
+
+        </div>
+</div> <!-- /#list -->
+
+
+
+
+<div class="row">
+    <div class="col-md-4 pull-left">
+            <div class="pagination form-inline ">
+                <select class = "form-control" name="bulk_action" >
+                    <option value="delete">DELETE</option>
+                </select>
+                <input type="submit" id='bulkSubmitBtn' onclick="return confirm('Are you sure?')" form="bulk_form" class="form-control btn btn-danger btn-sm" disabled>
+            </div>
+    </div>
+    
+    <div class='col-md-3 pagination text-center'>
+         <p>{{totalOfRecordsString}}</p>
+    </div>
+ 
+    <div class="col-md-5 text-right">
+         {{ pagerHtml|raw }} 
+    </div>
+</div> <!-- /#bottom -->
+
+
+
+{% endblock %}
+

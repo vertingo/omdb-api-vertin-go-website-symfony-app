@@ -1,0 +1,11 @@
+AppBundle\Entity\User:
+    type: entity
+    table: User
+    repositoryClass: AppBundle\Repository\UserRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    lifecycleCallbacks: {  }

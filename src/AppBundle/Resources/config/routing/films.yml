@@ -1,0 +1,42 @@
+films:
+    path:  /
+    defaults: { _controller: "AppBundle:Films:index" }
+
+films_show:
+    path:  /{id}/show
+    defaults: { _controller: "AppBundle:Films:show" }
+
+films_new:
+    path:  /new
+    defaults: { _controller: "AppBundle:Films:new" }
+
+films_create:
+    path:  /create
+    defaults: { _controller: "AppBundle:Films:create" }
+    requirements: { _method: post }
+
+films_edit:
+    path:  /{id}/edit
+    defaults: { _controller: "AppBundle:Films:edit" }
+
+films_update:
+    path:  /{id}/update
+    defaults: { _controller: "AppBundle:Films:update" }
+    requirements: { _method: post|put }
+
+films_delete:
+    path:  /{id}/delete
+    defaults: { _controller: "AppBundle:Films:delete" }
+    requirements: { _method: post|delete }
+    
+films_by_id_delete:
+    path:  /delete/{id}
+    defaults: { _controller: "AppBundle:Films:deleteById" }
+    requirements: { _method: get }
+    
+
+films_bulk_action:
+    path:  /bulk-action
+    defaults: { _controller: "AppBundle:Films:bulk" }
+    requirements: { _method: post }
+    

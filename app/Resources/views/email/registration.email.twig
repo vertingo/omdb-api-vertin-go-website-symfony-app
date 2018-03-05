@@ -1,0 +1,15 @@
+
+{% block subject %}Confirmation d'inscription{% endblock %}
+
+    {% block body_text %}
+    {% autoescape false %}
+
+    Bonjour {{ user.username }} !
+
+    Ceci est un email entierrement créé par nos soins.
+    Confirme ton inscription en cliquant sur le lien suivant : {{ confirmationUrl }}
+
+    Amicalement,
+    L'auteur de ce tuto.
+    {% endautoescape %}
+    {% endblock %}

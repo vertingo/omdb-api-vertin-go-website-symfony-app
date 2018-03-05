@@ -1,0 +1,227 @@
+{% extends 'PetkoparaCrudGeneratorBundle::base.html.twig' %}
+
+{% block title %}
+{{ parent() }} - film
+{% endblock %}
+
+{% block body %}
+
+<div id="top" class="row">
+    <div class="page-header">
+        <h2>View film <span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span> </h2>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-6">
+        <p><strong>Titrefilm</strong></p>
+        <p>
+            {{ film.titreFilm }}
+        </p>
+
+    </div>
+    <div class="col-md-6">
+        <p><strong>Annee</strong></p>
+        <p>
+            {{ film.annee }}
+        </p>
+
+    </div>
+    <div class="col-md-6">
+        <p><strong>Classification</strong></p>
+        <p>
+            {{ film.classification }}
+        </p>
+
+    </div>
+    <div class="col-md-6">
+        <p><strong>Sortie</strong></p>
+        <p>
+            {{ film.sortie }}
+        </p>
+
+    </div>
+    <div class="col-md-6">
+        <p><strong>Duree</strong></p>
+        <p>
+            {{ film.duree }}
+        </p>
+
+    </div>
+    <div class="col-md-6">
+        <p><strong>Genre</strong></p>
+        <p>
+            {{ film.genre }}
+        </p>
+
+    </div>
+    <div class="col-md-6">
+        <p><strong>Directeur</strong></p>
+        <p>
+            {{ film.directeur }}
+        </p>
+
+    </div>
+    <div class="col-md-6">
+        <p><strong>Scenariste</strong></p>
+        <p>
+            {{ film.scenariste }}
+        </p>
+
+    </div>
+    <div class="col-md-6">
+        <p><strong>Acteurs</strong></p>
+        <p>
+            {{ film.acteurs }}
+        </p>
+
+    </div>
+    <div class="col-md-6">
+        <p><strong>Synopsis</strong></p>
+        <p>
+            {{ film.synopsis }}
+        </p>
+
+    </div>
+    <div class="col-md-6">
+        <p><strong>Langue</strong></p>
+        <p>
+            {{ film.langue }}
+        </p>
+
+    </div>
+    <div class="col-md-6">
+        <p><strong>Nationalite</strong></p>
+        <p>
+            {{ film.nationalite }}
+        </p>
+
+    </div>
+    <div class="col-md-6">
+        <p><strong>Recompense</strong></p>
+        <p>
+            {{ film.recompense }}
+        </p>
+
+    </div>
+    <div class="col-md-6">
+        <p><strong>Illustration</strong></p>
+        <p>
+            <img src={{ film.illustration }}>
+        </p>
+
+    </div>
+    <div class="col-md-6">
+        <p><strong>Notations</strong></p>
+        <p>
+            {{ film.notations }}
+        </p>
+
+    </div>
+    <div class="col-md-6">
+        <p><strong>Metascore</strong></p>
+        <p>
+            {{ film.metascore }}
+        </p>
+
+    </div>
+    <div class="col-md-6">
+        <p><strong>Imdbnotation</strong></p>
+        <p>
+            {{ film.imdbNotation }}
+        </p>
+
+    </div>
+    <div class="col-md-6">
+        <p><strong>Imdbvotes</strong></p>
+        <p>
+            {{ film.imdbVotes }}
+        </p>
+
+    </div>
+    <div class="col-md-6">
+        <p><strong>Imdbid</strong></p>
+        <p>
+            {{ film.imdbId }}
+        </p>
+
+    </div>
+    <div class="col-md-6">
+        <p><strong>Type</strong></p>
+        <p>
+            {{ film.type }}
+        </p>
+
+    </div>
+    <div class="col-md-6">
+        <p><strong>Dvd</strong></p>
+        <p>
+            {{ film.dvd }}
+        </p>
+
+    </div>
+    <div class="col-md-6">
+        <p><strong>Boxoffice</strong></p>
+        <p>
+            {{ film.boxoffice }}
+        </p>
+
+    </div>
+    <div class="col-md-6">
+        <p><strong>Production</strong></p>
+        <p>
+            {{ film.production }}
+        </p>
+
+    </div>
+    <div class="col-md-6">
+        <p><strong>Website</strong></p>
+        <p>
+            {{ film.website }}
+        </p>
+
+    </div>
+    <div class="col-md-6">
+        <p><strong>Reponse</strong></p>
+        <p>
+            {{ film.reponse }}
+        </p>
+
+    </div>
+    <div class="col-md-6">
+        <p><strong>Id</strong></p>
+        <p>
+            {{ film.id }}
+        </p>
+
+    </div></div>
+
+<hr/>
+
+
+<div class="form-group">
+    <a class="btn btn-default" href="{{ path('films') }}">
+        <span class="glyphicon glyphicon-list" aria-hidden="true"></span>
+        Back to list
+    </a>
+    <a class="btn btn-primary" href="{{ path('films_edit', { 'id':  film.id }) }}">
+        <span class="glyphicon glyphicon-pencil" aria-hidden="true"></span>
+        Edit
+    </a>
+    <a class="btn btn-info" href="{{ path('films_new') }}">
+        <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
+        New
+    </a>
+    <form action="{{ path('films_delete', { 'id': film.id }) }}" method="post" style="display: inline-block">
+        <input type="hidden" name="_method" value="DELETE" />
+        {{ form_widget(delete_form) }}
+        <button class="btn btn-danger" type="submit" onclick="return confirm('Are you sure');">
+            <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
+            Delete
+        </button>
+    </form>
+</div>
+
+
+{% endblock %}
+

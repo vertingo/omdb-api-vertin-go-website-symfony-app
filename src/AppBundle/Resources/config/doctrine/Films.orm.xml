@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping http://doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+  <entity repository-class="AppBundle\Repository\FilmsRepository" name="AppBundle\Entity\Films">
+    <id name="id" type="integer" column="id">
+      <generator strategy="AUTO"/>
+    </id>
+    <field name="titreFilm" type="string" column="titre_film" length="255"/>
+    <field name="annee" type="string" column="annee" length="255"/>
+    <field name="classification" type="string" column="classification" length="255"/>
+    <field name="sortie" type="string" column="sortie" length="255"/>
+    <field name="duree" type="integer" column="duree" length="255"/>
+    <field name="genre" type="string" column="genre" length="255"/>
+    <field name="directeur" type="string" column="directeur" length="255"/>
+    <field name="scenariste" type="string" column="scenariste" length="255"/>
+    <field name="acteurs" type="string" column="acteurs" length="255"/>
+    <field name="synopsis" type="string" column="synopsis" length="1000"/>
+    <field name="langue" type="string" column="langue" length="255"/>
+    <field name="nationalite" type="string" column="nationalite" length="255"/>
+    <field name="recompense" type="string" column="recompense" length="255"/>
+    <field name="illustration" type="string" column="illustration" length="255"/>
+    <field name="notations" type="string" column="notations" length="255"/>
+    <field name="metascore" type="integer" column="metascore" length="255"/>
+    <field name="imdbNotation" type="float" column="imdb_notation" length="255"/>
+    <field name="imdbVotes" type="integer" column="imdb_votes" length="255"/>
+    <field name="imdbId" type="string" column="imdb_id" length="255"/>
+    <field name="type" type="string" column="type" length="255"/>
+    <field name="dvd" type="string" column="dvd" length="255"/>
+    <field name="boxoffice" type="string" column="boxoffice" length="255"/>
+    <field name="production" type="string" column="production" length="255"/>
+    <field name="website" type="string" column="website" length="255"/>
+    <field name="reponse" type="boolean" column="reponse" length="10"/>
+  </entity>
+</doctrine-mapping>

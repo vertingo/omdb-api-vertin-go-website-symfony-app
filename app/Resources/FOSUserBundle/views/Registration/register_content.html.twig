@@ -1,0 +1,40 @@
+<!-- BEGIN REGISTRATION FORM -->
+
+  <div class="col-md-3 col-md-offset-4 ">
+
+{{ form_start(form, {'method': 'post', 'action': path('fos_user_registration_register'), 'attr': {'class': 'fos_user_registration_register'}}) }}
+    <h3 class="font-green">S'enregister</h3>
+    <div class="form-group">
+        {{ form_widget(form.username, { 'attr': {'class': 'form-control placeholder-no-fix', 'placeholder':'Username'} }) }}
+        {% for errorItem in form.username.vars.errors %}
+        <span class="help-inline">{{ errorItem.message }}</span>
+        {% endfor %}
+    </div>
+    <div class="form-group">
+        {{ form_widget(form.email, { 'attr': {'class': 'form-control', 'placeholder':'E-mail'} }) }}
+        {% for errorItem in form.email.vars.errors %}
+        <span class="help-inline">{{ errorItem.message }}</span>
+        {% endfor %}
+    </div>
+    <div class="form-group">
+        {{ form_widget(form.plainPassword.first, { 'attr': {'class': 'form-control', 'placeholder':'Password'} }) }}
+        {% for errorItem in form.plainPassword.first.vars.errors %}
+        <span class="help-inline">{{ errorItem.message }}</span>
+        {% endfor %}
+    </div>
+    <div class="form-group">
+        {{ form_widget(form.plainPassword.second, { 'attr': {'class': 'form-control', 'placeholder':'Repeat Password'} }) }}
+        {% for errorItem in form.plainPassword.second.vars.errors %}
+        <span class="help-inline">{{ errorItem.message }}</span>
+        {% endfor %}
+    </div>
+    <div class="form-actions">
+        <a class="btn btn-default" href="{{ path('fos_user_security_login') }}">Back to login</a>
+        <button type="submit" id="register-submit-btn" class="btn btn-success">Submit</button>
+    </div>
+    {{ form_rest(form) }}
+{{ form_end(form) }}
+
+</div>
+<!-- END REGISTRATION FORM -->
+
