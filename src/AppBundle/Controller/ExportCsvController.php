@@ -22,8 +22,6 @@ use AppBundle\Omdbapi\Omdbapi;
 class ExportCsvController extends Controller
 {
     
-  
-
     /**
      * @Route("/export", name="Csv")
      */
@@ -101,7 +99,6 @@ class ExportCsvController extends Controller
             { // Eléments séparés par un point-virgule, à modifier si necessaire
                 $num = count($data); // Nombre d'éléments sur la ligne traitée
 
-                echo $num;
                 /***************************************add/update****************************************************************/
                 //si add ou update
                 
@@ -224,7 +221,6 @@ class ExportCsvController extends Controller
                       {
                       $country=$omdbapi_result["Country"];
                       }
-                      
 
                       $edit->setNationalite($country);
                       $edit->setRecompense($omdbapi_result["Awards"]);
@@ -415,8 +411,6 @@ class ExportCsvController extends Controller
                 }             
               }
 
-            
-
               if($data[0] == "delete")
               {
                $deleteQuery = $this->getDoctrine()
@@ -466,10 +460,6 @@ class ExportCsvController extends Controller
           $Films->setWebsite($doc["Website"]);
           $Films->setReponse($doc["Reponse"]);
           
-          // $dateString = $doc["Date_Allumage"];
-          // $Date = new DateTime($dateString);
-          // $Films->setDateAllumageF($Date);
-
           // Enregistrement de l'objet en vu de son écriture dans la base de données
           $em->persist($Films);
 

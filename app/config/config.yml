@@ -94,3 +94,8 @@ fos_user:
 services:
     fos_user.doctrine_registry:
         alias: doctrine
+
+easy_admin:
+    entities:
+        - AppBundle\Entity\Films
+        - AppBundle\Entity\User
