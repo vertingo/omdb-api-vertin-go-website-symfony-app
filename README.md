@@ -55,7 +55,7 @@ php bin/console fos:user:promote user ROLE_ADMIN
 (Pour donner les droits d'accés à un utilisateur au back-end qui sera accesible à cet url: 
 ==> http://localhost/Omdb_Api_Vertin_Go_Website/web/app_dev.php/admin 
 aprés s'être réauthentifier sur la page de login: 
-==> http://localhost/Omdb_Api_Vertin_Go_Website/web/app_dev.php/admin)
+==> http://localhost/Omdb_Api_Vertin_Go_Website/web/app_dev.php/login)
 
 ```
 
