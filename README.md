@@ -43,14 +43,19 @@ php bin/console server:run
 
 ```
 Accéder ensuite à la page de login:
-http://localhost/Omdb_Api_Vertin_Go_Website/web/app_dev.php/login
+==> http://localhost/Omdb_Api_Vertin_Go_Website/web/app_dev.php/login
 
 Pour importer une liste de films via un fichier csv il faut créer un fichier csv et écrire sur chaque ligne add:le_nom_de_votre_film (Vous pouvez trouver un exemple de ficier csv à la racine du projet: csv_omdbapi.csv)
 
 Parti Back-end
 
 ```
-php bin/console fos:user:promote user ROLE_ADMIN (Pour donner les droits d'accés à un utilisateur au back-end qui sera accesible à cet url: http://localhost/Omdb_Api_Vertin_Go_Website/web/app_dev.php/admin aprés s'être réauthentifier sur la page de login: http://localhost/Omdb_Api_Vertin_Go_Website/web/app_dev.php/admin)
+php bin/console fos:user:promote user ROLE_ADMIN 
+
+(Pour donner les droits d'accés à un utilisateur au back-end qui sera accesible à cet url: 
+==> http://localhost/Omdb_Api_Vertin_Go_Website/web/app_dev.php/admin 
+aprés s'être réauthentifier sur la page de login: 
+==> http://localhost/Omdb_Api_Vertin_Go_Website/web/app_dev.php/admin)
 
 ```
 
