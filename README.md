@@ -23,8 +23,8 @@ L'idée serait de gérer une plateforme permettant aux utilisateurs de se créer
 
 Prérequis avant de taper les lignes de commandes suivantes:
 Placer le contenu du projet dans le dossier htdocs d'un simulateur de server local tel que xampp!
-Veillez à ce que les champs de la base de donnée du fichier app/config/parameters soient renseignées
-soit le port par defaut pour mysql 3306, le nom de la base de donnée qui doit au préalable être créé dans PhpMyAdmin!
+Veillez à ce que les champs de la base de donnée du fichier app/config/parameters soient renseignés
+soit le port par defaut pour mysql 3306, le nom de la base de données qui doit au préalable être créée dans PhpMyAdmin!
 Pour cela dans xampp lancer le server Apache, le server Mysql et connectez-vous à l'interface PhpMyAdmin en cliquant sur le bouton admin sur la ligne du Module MySql!
 Ensuite cliquer sur nouvelle base de données et créer la base omdbapi!
 
@@ -45,14 +45,14 @@ php bin/console server:run
 Accéder ensuite à la page de login:
 ==> http://localhost/Omdb_Api_Vertin_Go_Website/web/app_dev.php/login
 
-Pour importer une liste de films via un fichier csv il faut créer un fichier csv et écrire sur chaque ligne add:le_nom_de_votre_film (Vous pouvez trouver un exemple de ficier csv à la racine du projet: csv_omdbapi.csv)
+Pour importer une liste de films via un fichier csv il faut créer un fichier csv et écrire sur chaque ligne add:le_nom_de_votre_film (Vous pouvez trouver un exemple de fichier csv à la racine du projet: csv_omdbapi.csv)
 
-Parti Back-end
+Partie Back-end
 
 ```
 php bin/console fos:user:promote user ROLE_ADMIN 
 
-(Pour donner les droits d'accés à un utilisateur au back-end qui sera accesible à cet url: 
+(Pour donner les droits d'accès à un utilisateur au back-end qui sera accessible à cet url: 
 ==> http://localhost/Omdb_Api_Vertin_Go_Website/web/app_dev.php/admin 
 aprés s'être réauthentifier sur la page de login: 
 ==> http://localhost/Omdb_Api_Vertin_Go_Website/web/app_dev.php/login)
