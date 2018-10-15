@@ -25,7 +25,10 @@ $kernel->loadClassCache();
 // When using the HttpCache, you need to call the method in your front controller instead of relying on the configuration parameter
 //Request::enableHttpMethodParameterOverride();
 $request = Request::createFromGlobals();
-Request::setTrustedProxies(array('localhost', 'https://omdbapi-app.herokuapp.com/'));
+Request::setTrustedProxies(array($request->server->get('REMOTE_ADDR')));
+Request::setTrustedHeaderName(Request::HEADER_FORWARDED, null);
+Request::setTrustedHeaderName(Request::HEADER_CLIENT_HOST, null);
+//Request::setTrustedProxies(array('localhost', 'https://omdbapi-app.herokuapp.com/'));
 $response = $kernel->handle($request);
 $response->send();
 $kernel->terminate($request, $response);
