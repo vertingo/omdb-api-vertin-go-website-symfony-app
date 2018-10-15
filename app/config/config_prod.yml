@@ -26,4 +26,24 @@ monolog:
         console:
             type:  console
 
-
+# Doctrine Configuration
+doctrine:
+    dbal:
+        driver:   pdo_mysql
+        host:     "%database_host_prod%"
+        port:     "%database_port_prod%"
+        dbname:   "%database_name_prod%"
+        user:     "%database_user_prod%"
+        password: "%database_password_prod%"
+        charset:  UTF8
+        #   unix_socket: /tmp/mysql.sock
+        # if using pdo_sqlite as your database driver:
+        #   1. add the path in parameters.yml
+        #     e.g. database_path: "%kernel.root_dir%/data/data.db3"
+        #   2. Uncomment database_path in parameters.yml.dist
+        #   3. Uncomment next line:
+        #     path:     "%database_path%"
+    orm:
+        auto_generate_proxy_classes: "%kernel.debug%"
+        naming_strategy: doctrine.orm.naming_strategy.underscore
+        auto_mapping: true
