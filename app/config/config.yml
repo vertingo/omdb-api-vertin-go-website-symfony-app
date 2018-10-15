@@ -60,6 +60,35 @@ doctrine:
         naming_strategy: doctrine.orm.naming_strategy.underscore
         auto_mapping: true
 
+
+# Doctrine Configuration
+doctrine:
+    dbal:
+        default_connection: default
+        connections:
+            default:
+                driver:   pdo_mysql
+                host:     "%database_host%"
+                port:     "%database_port%"
+                dbname:   "%database_name%"
+                user:     "%database_user%"
+                password: "%database_password%"
+                charset:  UTF8
+            #   unix_socket: /tmp/mysql.sock
+            prod:
+                driver:   pdo_mysql
+                host:     "%database_host_prod%"
+                port:     "%database_port_prod%"
+                dbname:   "%database_name_prod%"
+                user:     "%database_user_prod%"
+                password: "%database_password_prod%"
+                charset:  UTF8
+            #   unix_socket: /tmp/mysql.sock
+    orm:
+        auto_generate_proxy_classes: "%kernel.debug%"
+        naming_strategy: doctrine.orm.naming_strategy.underscore
+        auto_mapping: true
+
 # Swiftmailer Configuration
 swiftmailer:
     transport: "%mailer_transport%"
