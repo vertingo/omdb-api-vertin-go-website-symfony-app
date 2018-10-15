@@ -34,7 +34,8 @@
         "twig/twig": "~1.28|~1.35.0",
         "friendsofsymfony/user-bundle": "~2.0",
         "royopa/fpdf-symfony2": "^3.0",
-        "easycorp/easyadmin-bundle": "^1.17"
+        "easycorp/easyadmin-bundle": "^1.17",
+        "csanquer/pdo-service-provider": "~1.1dev"
     },
     "require-dev": {
         "sensio/generator-bundle": "^3.0",
@@ -66,7 +67,11 @@
         "symfony-tests-dir": "tests",
         "symfony-assets-install": "relative",
         "incenteev-parameters": {
-            "file": "app/config/parameters.yml"
+            "file": "app/config/parameters.yml",
+            "env-map": {
+                "database_url": "DATABASE_URL",
+                "monolog_action_level": "LOG_LEVEL"
+            }
         },
         "branch-alias": null
     }

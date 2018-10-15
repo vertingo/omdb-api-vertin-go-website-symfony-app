@@ -17,11 +17,15 @@ monolog:
     handlers:
         main:
             type:         fingers_crossed
-            action_level: error
             handler:      nested
+            action_level: %monolog_action_level%
         nested:
             type:  stream
             path:  "%kernel.logs_dir%/%kernel.environment%.log"
             level: debug
         console:
             type:  console
+
+doctrine:
+    dbal:
+        url: "%database_url%"
