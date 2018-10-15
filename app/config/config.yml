@@ -64,7 +64,7 @@ doctrine:
 # Doctrine Configuration
 doctrine:
     dbal:
-        default_connection: default
+        default_connection: prod
         connections:
             default:
                 driver:   pdo_mysql
