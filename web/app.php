@@ -12,11 +12,10 @@ include_once __DIR__.'/../var/bootstrap.php.cache';
 // You should change the ApcClassLoader first argument to a unique prefix
 // in order to prevent cache key conflicts with other applications
 // also using APC.
-/*
+
 $apcLoader = new Symfony\Component\ClassLoader\ApcClassLoader(sha1(__FILE__), $loader);
 $loader->unregister();
 $apcLoader->register(true);
-*/
 
 $kernel = new AppKernel('prod', false);
 $kernel->loadClassCache();
@@ -28,7 +27,6 @@ $request = Request::createFromGlobals();
 Request::setTrustedProxies(array($request->server->get('REMOTE_ADDR')));
 Request::setTrustedHeaderName(Request::HEADER_FORWARDED, null);
 Request::setTrustedHeaderName(Request::HEADER_CLIENT_HOST, null);
-//Request::setTrustedProxies(array('localhost', 'https://omdbapi-app.herokuapp.com/'));
 $response = $kernel->handle($request);
 $response->send();
 $kernel->terminate($request, $response);
