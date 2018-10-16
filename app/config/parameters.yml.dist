@@ -13,7 +13,7 @@ parameters:
     database_name_prod: d6r74gsqthmp93
     database_user_prod: bvubhazgqjgcgx
     database_password_prod: 033c3a914c2fff9b650cb996192d29b31f13128b1a794062f2137494770bf5f5 
- #  database_url: ~
+    database_url: ~
 
  #  You should uncomment this if you want use pdo_sqlite
     database_path: "%kernel.root_dir%/data.db3"

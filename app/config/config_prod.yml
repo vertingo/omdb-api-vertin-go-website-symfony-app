@@ -30,6 +30,7 @@ monolog:
 doctrine:
     dbal:
         driver:   pdo_mysql
+        url: "%database_url%"
         host:     "%database_host_prod%"
         port:     "%database_port_prod%"
         dbname:   "%database_name_prod%"
