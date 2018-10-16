@@ -4,9 +4,17 @@
 parameters:
     database_host:     127.0.0.1
     database_port:     ~
-    database_name:     symfony
+    database_name:     omdbapi
     database_user:     root
     database_password: ~
+
+    database_host_prod: ec2-46-51-184-229.eu-west-1.compute.amazonaws.com
+    database_port_prod: 5432
+    database_name_prod: d6r74gsqthmp93
+    database_user_prod: bvubhazgqjgcgx
+    database_password_prod: 033c3a914c2fff9b650cb996192d29b31f13128b1a794062f2137494770bf5f5 
+ #  database_url: '%database_url%'
+
     # You should uncomment this if you want use pdo_sqlite
     database_path: "%kernel.root_dir%/data.db3"
     monolog_action_level: error
