@@ -13,9 +13,9 @@ include_once __DIR__.'/../var/bootstrap.php.cache';
 // in order to prevent cache key conflicts with other applications
 // also using APC.
 
-$apcLoader = new Symfony\Component\ClassLoader\ApcClassLoader(sha1(__FILE__), $loader);
+/*$apcLoader = new Symfony\Component\ClassLoader\ApcClassLoader(sha1(__FILE__), $loader);
 $loader->unregister();
-$apcLoader->register(true);
+$apcLoader->register(true);*/
 
 $kernel = new AppKernel('prod', false);
 $kernel->loadClassCache();
