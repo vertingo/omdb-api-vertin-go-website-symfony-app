@@ -21,6 +21,7 @@ class AppKernel extends Kernel
             new Petkopara\CrudGeneratorBundle\PetkoparaCrudGeneratorBundle(),
             new FOS\UserBundle\FOSUserBundle(),
             new EasyCorp\Bundle\EasyAdminBundle\EasyAdminBundle(),
+            new Azine\EmailBundle\AzineEmailBundle(),
         ];
 
         if (in_array($this->getEnvironment(), ['dev', 'test'], true)) {

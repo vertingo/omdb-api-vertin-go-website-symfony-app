@@ -1,5 +1,5 @@
 films:
-    path:  /films
+    path:  /
     defaults: { _controller: "AppBundle:Films:index" }
 
 films_show:

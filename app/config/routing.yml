@@ -11,8 +11,8 @@ app:
 fos_user:
     resource: "@FOSUserBundle/Resources/config/routing/all.xml"
 
- #azine_email_bundle:
-   #  resource: "@AzineEmailBundle/Resources/config/routing.yml"
+ azine_email_bundle:
+     resource: "@AzineEmailBundle/Resources/config/routing.yml"
 
 films:
     path:  /films
