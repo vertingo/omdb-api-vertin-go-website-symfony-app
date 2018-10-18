@@ -11,6 +11,9 @@ app:
 fos_user:
     resource: "@FOSUserBundle/Resources/config/routing/all.xml"
 
+ #azine_email_bundle:
+   #  resource: "@AzineEmailBundle/Resources/config/routing.yml"
+
 films:
     path:  /films
     defaults: { _controller: "AppBundle:Films:index" }
@@ -54,5 +57,3 @@ films_bulk_action:
     defaults: { _controller: "AppBundle:Films:bulk" }
     requirements: { _method: post }
 
-azine_email_bundle:
-    resource: "@AzineEmailBundle/Resources/config/routing.yml"
