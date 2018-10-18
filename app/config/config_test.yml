@@ -13,4 +13,13 @@ web_profiler:
     intercept_redirects: false
 
 swiftmailer:
-    disable_delivery: true
+    mailers:
+        defaultMailer:
+            spool:
+                type: file
+                path: "%kernel.root_dir%/spool.mails/test"
+
+        immediateMailer:
+            spool:
+                type: file
+                path: "%kernel.root_dir%/spool.mails/test"
