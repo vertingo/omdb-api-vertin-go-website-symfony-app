@@ -79,7 +79,7 @@ easy_admin:
         - AppBundle\Entity\Films
         - AppBundle\Entity\User
 
-# app/config/config.yml
+
 azine_email:
 
     # the class of your implementation of the RecipientInterface
@@ -98,11 +98,11 @@ azine_email:
     recipient_provider:   azine_email.default.recipient_provider
 
     # the service-id of the mailer service to be used
-    #template_twig_swift_mailer:  azine_email.default.template_twig_swift_mailer
+    template_twig_swift_mailer:  azine_email.default.template_twig_swift_mailer
     #no_reply:              Required
 
         # the no-reply email-address
-        email:                no-reply@example.com # Required
+        email:                admin@vertin-go.com # Required
 
         # the name to appear with the 'no-reply'-address.
         name:                 'notification daemon' # Required
