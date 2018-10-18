@@ -98,7 +98,7 @@ azine_email:
     recipient_provider:   azine_email.default.recipient_provider
 
     # the service-id of the mailer service to be used
-    template_twig_swift_mailer:  azine_email.default.template_twig_swift_mailer
+    #template_twig_swift_mailer:  azine_email.default.template_twig_swift_mailer
     no_reply:         #     Required
 
         # the no-reply email-address
