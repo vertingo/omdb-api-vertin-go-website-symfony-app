@@ -35,7 +35,8 @@
         "friendsofsymfony/user-bundle": "~2.0",
         "royopa/fpdf-symfony2": "^3.0",
         "easycorp/easyadmin-bundle": "^1.17",
-        "csanquer/pdo-service-provider": "~1.1dev"
+        "csanquer/pdo-service-provider": "~1.1dev",
+        "azine/email-bundle": "dev-master"
     },
     "require-dev": {
         "sensio/generator-bundle": "^3.0",

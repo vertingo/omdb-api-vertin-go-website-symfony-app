@@ -14,7 +14,7 @@ fos_user:
 films:
     path:  /films
     defaults: { _controller: "AppBundle:Films:index" }
-    requirements: { _method: get }
+ #   requirements: { _method: get }
 
 films_show:
     path:  /{id}/show
@@ -53,3 +53,6 @@ films_bulk_action:
     path:  /bulk-action
     defaults: { _controller: "AppBundle:Films:bulk" }
     requirements: { _method: post }
+
+azine_email_bundle:
+    resource: "@AzineEmailBundle/Resources/config/routing.yml"
