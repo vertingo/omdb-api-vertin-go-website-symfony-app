@@ -155,9 +155,9 @@ azine_email:
 
 
     swiftmailer:
-    default_mailer: defaultMailer // name of the default mailer defined below.
+    default_mailer: defaultMailer # name of the default mailer defined below.
     mailers:
-        defaultMailer: // you can choose your name for the default mailer
+        defaultMailer: # you can choose your name for the default mailer
             host:           "%mailer_host%"
             username:       "%mailer_user%"
             password:       "%mailer_password%"
@@ -169,7 +169,7 @@ azine_email:
                 sleep:      2
             logging:        "%kernel.debug%"
 
-        immediateMailer: // this name is hard-coded in the bundle!
+        immediateMailer: # this name is hard-coded in the bundle!
             host:           "%mailer_host%"
             username:       "%mailer_user%"
             password:       "%mailer_password%"
