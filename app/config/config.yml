@@ -97,16 +97,7 @@ swiftmailer:
             logging:        "%kernel.debug%"
 
         immediateMailer: # this name is hard-coded in the bundle!
-            host:           "%mailer_host%"
-            username:       "%mailer_user%"
-            password:       "%mailer_password%"
-            transport:      "%mailer_transport%"
-            port:           "%mailer_port%"
-            encryption:     "%mailer_encryption%"
-            antiflood:
-                threshold:  10
-                sleep:      2
-            logging:        "%kernel.debug%"
+           @mailer
 
 azine_email:
 

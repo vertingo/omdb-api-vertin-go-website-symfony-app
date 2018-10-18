@@ -8,7 +8,7 @@ use FOS\UserBundle\Model\User as BaseUser;
 use Doctrine\ORM\Mapping as ORM;
 
 
-class User extends BaseUser
+class User extends BaseUser implements \Azine\EmailBundle\Entity\RecipientInterface
 {
     
     protected $id;
