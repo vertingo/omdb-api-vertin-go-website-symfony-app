@@ -102,7 +102,7 @@ azine_email:
     #no_reply:              Required
 
         # the no-reply email-address
-        email:                'admin@vertin-go.com' # Required
+        email:                "admin@vertin-go.com" # Required
 
         # the name to appear with the 'no-reply'-address.
         name:                 'notification daemon' # Required
