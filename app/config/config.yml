@@ -83,7 +83,7 @@ easy_admin:
 azine_email:
 
     # the class of your implementation of the RecipientInterface
-    recipient_class:      Acme\SomeBundle\Entity\User # Required
+    recipient_class:      AppBundle\Entity\User # Acme\SomeBundle\Entity\User  Required
 
     # the fieldname of the boolean field on the recipient class indicating, that a newsletter should be sent or not
     recipient_newsletter_field:  newsletter
