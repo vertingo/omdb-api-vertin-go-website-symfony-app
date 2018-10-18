@@ -97,7 +97,7 @@ swiftmailer:
             logging:        "%kernel.debug%"
 
         immediateMailer: # this name is hard-coded in the bundle!
-           @mailer
+           "@mailer"
 
 azine_email:
 
