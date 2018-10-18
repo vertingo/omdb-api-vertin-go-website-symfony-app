@@ -102,10 +102,10 @@ azine_email:
     no_reply:              Required
 
         # the no-reply email-address
-        #email:                admin@gmail.com 
+        email:   admin@gmail.com 
 
         # the name to appear with the 'no-reply'-address.
-        name:                 'notification daemon' # Required
+        name:   'notification daemon' # Required
 
     # absolute path to the image-folder containing the images used in your templates.
     image_dir:            '%kernel.root_dir%/../vendor/azine/email-bundle/Azine/EmailBundle/Resources/htmlTemplateImages/'
