@@ -11,7 +11,7 @@ use Azine\EmailBundle\Services\TemplateProviderInterface;
  *
  * @author Dominik Businger
  */
-class ExampleTemplateProvider extends TemplateProvider implements TemplateProviderInterface
+class ExampleTemplateProvider extends AzineTemplateProvider implements TemplateProviderInterface
 {
     // design your own twig-templates for your custom emails
     // and list them here as constants, to avoid typos.
