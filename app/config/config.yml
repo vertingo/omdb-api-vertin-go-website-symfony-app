@@ -83,7 +83,7 @@ easy_admin:
 
 swiftmailer:
     default_mailer: defaultMailer # name of the default mailer defined below.
-    mailers:
+    mailer:
         defaultMailer: # you can choose your name for the default mailer
             host:           "%mailer_host%"
             username:       "%mailer_user%"
@@ -96,7 +96,8 @@ swiftmailer:
                 sleep:      2
             logging:        "%kernel.debug%"
 
-      
+        immediateMailer: # this name is hard-coded in the bundle!
+           "@mailer"
 
 azine_email:
 
