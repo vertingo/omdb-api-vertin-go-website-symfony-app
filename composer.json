@@ -36,7 +36,9 @@
         "royopa/fpdf-symfony2": "^3.0",
         "easycorp/easyadmin-bundle": "^1.17",
         "csanquer/pdo-service-provider": "~1.1dev",
-        "azine/email-bundle": "dev-master"
+        "azine/email-bundle": "dev-master",
+        "symfony-cmf/seo-bundle": "^2.1",
+        "leogout/seo-bundle": "^1.2"
     },
     "require-dev": {
         "sensio/generator-bundle": "^3.0",
