@@ -56,10 +56,3 @@ doctrine:
         naming_strategy: doctrine.orm.naming_strategy.underscore
         auto_mapping: true
 
-swiftmailer:
-    mailers:
-        defaultMailer:
-            delivery_address: mail-to-dev-account-spool@your.domain.com
-
-        immediateMailer:
-            delivery_address: mail-to-dev-account-nospool@your.domain.com
