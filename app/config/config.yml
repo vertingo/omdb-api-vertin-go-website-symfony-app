@@ -80,7 +80,7 @@ easy_admin:
     entities:
         - AppBundle\Entity\Films
         - AppBundle\Entity\User
-
+        
 swiftmailer:
     default_mailer: defaultMailer # name of the default mailer defined below.
     mailers:
