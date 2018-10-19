@@ -81,23 +81,7 @@ easy_admin:
         - AppBundle\Entity\Films
         - AppBundle\Entity\User
 
-swiftmailer:
-    default_mailer: defaultMailer # name of the default mailer defined below.
-    mailers:
-        defaultMailer: # you can choose your name for the default mailer
-            host:           "%mailer_host%"
-            username:       "%mailer_user%"
-            password:       "%mailer_password%"
-            transport:      "%mailer_transport%"
-            port:           "%mailer_port%"
-            encryption:     "%mailer_encryption%"
-            antiflood:
-                threshold:  10
-                sleep:      2
-            logging:        "%kernel.debug%"
 
-        immediateMailer: # this name is hard-coded in the bundle!
-           "@mailer"
 
 azine_email:
 
