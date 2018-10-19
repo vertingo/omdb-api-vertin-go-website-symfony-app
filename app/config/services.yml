@@ -13,10 +13,50 @@ services:
         class: AppBundle\Controller\CiqTController
 
 
-    azine_email.example.web_view_service:
-        class: Azine\EmailBundle\Services\AzineWebViewService
+    # src/Your/AwesomeBundle/Resources/config/services.yml
+
+    # the notifierservice is required, as you MUST provide your own implementation
+    your.awesome.bundle.notifierservice:
+        class: AppBundle\Services\ExampleNotifierService
         arguments:
-          $router:       "@router"
+          mailer:             "@azine_email_template_twig_swift_mailer"
+          twig:               "@twig"
+          logger:             "@logger"
+          router:             "@router"
+          entityManager:      "@doctrine.orm.entity_manager"
+          templateProvider:   "@azine_email_template_provider"
+          recipientProvider:  "@azine_email_recipient_provider"
+          translatorService:  "@translator.default"
+          parameters:
+            newsletter_interval : "%azine_email_newsletter_interval%"
+            newsletter_send_time: "%azine_email_newsletter_send_time%"
+            templates_newsletter:     "%azine_email_templates_newsletter%"
+            templates_notifications:  "%azine_email_templates_notifications%"
+            templates_content_item:   "%azine_email_templates_content_item%"
+            
+    # if you don't add new templates, the template_provider is optional
+    # this is just an example! Your implementation might need other parameters.
+    your.awesome.bundle.template_provider:
+        class: AppBundle\Services\ExampleTemplateProvider
+        arguments:
+          router:       "@router"
+          translator:   "@translator.default"
+          parameters:
+            image_dir:  "%azine_email_image_dir%"
+            allowed_images_folders: "%azine_email_allowed_images_folders%"
+            tracking_params_campaign_name: "%azine_email_tracking_params_campaign_name%"
+            tracking_params_campaign_term: "%azine_email_tracking_params_campaign_term%"
+            tracking_params_campaign_content: "%azine_email_tracking_params_campaign_content%"
+            tracking_params_campaign_medium: "%azine_email_tracking_params_campaign_medium%"
+            tracking_params_campaign_source: "%azine_email_tracking_params_campaign_source%"
+
+    # if you don't add new templates and your newsletter does not need any dummy-data
+    # then the web_view_service is optional
+    # this is just an example! Your implementation might need other parameters.
+    your.awesome.bundle.web_view_service:
+        class: AppBundle\Services\ExampleWebViewService
+        arguments:
+          router:       "@router"
 
 
 
