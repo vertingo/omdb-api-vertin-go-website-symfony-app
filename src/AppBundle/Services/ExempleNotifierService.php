@@ -1,5 +1,5 @@
 <?php
-namespace Azine\EmailBundle\Services;
+namespace AppBundle\Services;
 use Azine\EmailBundle\Entity\RecipientInterface;
 use Azine\EmailBundle\Services\AzineNotifierService as NotifierService;
 /**

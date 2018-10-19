@@ -1,5 +1,5 @@
 <?php
-namespace Azine\EmailBundle\Services;
+namespace AppBundle\Services;
 use Azine\EmailBundle\Services\AzineTemplateProvider as TemplateProvider;
 use Azine\EmailBundle\Services\TemplateProviderInterface as TemplateProviderI;
 

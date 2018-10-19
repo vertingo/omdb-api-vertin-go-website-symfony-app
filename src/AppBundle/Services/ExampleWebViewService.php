@@ -1,5 +1,5 @@
 <?php
-namespace Azine\EmailBundle\Services;
+namespace AppBundle\Services;
 use Azine\EmailBundle\Services\AzineWebViewService as WebViewService;
 /**
  * This is an example how to override the AzineWebViewSerive.

@@ -6,10 +6,10 @@ namespace AppBundle\Entity;
 
 use FOS\UserBundle\Model\User as BaseUser;
 use Doctrine\ORM\Mapping as ORM;
-use Azine\EmailBundle\Entity\RecipientInterface as Recipient;
+use Azine\EmailBundle\Entity\RecipientInterface;
 
 
-class User extends BaseUser implements Recipient
+class User extends BaseUser implements RecipientInterface
 {
     
    /* protected $id;
