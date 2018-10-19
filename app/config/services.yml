@@ -13,7 +13,7 @@ services:
         class: AppBundle\Controller\CiqTController
 
 
-    # src/Your/AwesomeBundle/Resources/config/services.yml
+    # src/Your/AwesomeBundle/Resources/config/services.ym
 
     # the notifierservice is required, as you MUST provide your own implementation
     your.awesome.bundle.notifierservice:
