@@ -1,6 +1,6 @@
 <?php
 namespace AppBundle\Services;
-use Azine\EmailBundle\Services\AzineWebViewService as WebViewService;
+use Azine\EmailBundle\Services\AzineWebViewService;
 /**
  * This is an example how to override the AzineWebViewSerive.
  *
@@ -8,7 +8,7 @@ use Azine\EmailBundle\Services\AzineWebViewService as WebViewService;
  *
  * @author dominik
  */
-class ExampleWebViewService extends WebViewService
+class ExampleWebViewService extends AzineWebViewService
 {
     public function getTemplatesForWebPreView()
     {

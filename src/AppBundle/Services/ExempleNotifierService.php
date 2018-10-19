@@ -1,7 +1,7 @@
 <?php
 namespace AppBundle\Services;
 use Azine\EmailBundle\Entity\RecipientInterface;
-use Azine\EmailBundle\Services\AzineNotifierService as NotifierService;
+use Azine\EmailBundle\Services\AzineNotifierService;
 /**
  * This Service compiles and renders the emails to be sent.
  * This class is only an example. Implement your own!
@@ -10,7 +10,7 @@ use Azine\EmailBundle\Services\AzineNotifierService as NotifierService;
  *
  * @author Dominik Businger
  */
-class ExampleNotifierService extends NotifierService
+class ExampleNotifierService extends AzineNotifierService
 {
     /**
      * (non-PHPdoc).
