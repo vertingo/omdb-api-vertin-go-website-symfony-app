@@ -29,7 +29,7 @@
         "sensio/distribution-bundle": "^5.0",
         "sensio/framework-extra-bundle": "^3.0.2",
         "incenteev/composer-parameter-handler": "^2.0",
-        "petkopara/crud-generator-bundle": "^3.0",
+        "petkopara/crud-generator-bundle": "^3.0.5",
         "goodby/csv": "*",
         "twig/twig": "~1.28|~1.35.0",
         "friendsofsymfony/user-bundle": "~2.0",
@@ -37,8 +37,9 @@
         "easycorp/easyadmin-bundle": "^1.17",
         "csanquer/pdo-service-provider": "~1.1dev",
         "azine/email-bundle": "dev-master",
-        "symfony-cmf/seo-bundle": "^2.1",
-        "leogout/seo-bundle": "^1.2"
+        "symfony-cmf/seo-bundle": "dev-master",
+        "leogout/seo-bundle": "dev-master",
+        "vich/uploader-bundle": "dev-master"
     },
     "require-dev": {
         "sensio/generator-bundle": "^3.0",
