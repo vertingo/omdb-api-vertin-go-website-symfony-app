@@ -34,8 +34,8 @@ class FilmsController extends Controller
         return $this->render('films/index.html.twig', array(
             'films' => $films,
             'pagerHtml' => $pagerHtml,
-            'filterForm' => $filterForm->createView(),
-            'totalOfRecordsString' => $totalOfRecordsString,
+            'filterForm' => $filterForm->createView()
+            //'totalOfRecordsString' => $totalOfRecordsString,
 
         ));
     }
