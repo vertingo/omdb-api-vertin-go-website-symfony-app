@@ -134,7 +134,7 @@ class FilmsController extends Controller
      * Calculates the total of records string
      */
     protected function getTotalOfRecordsString($queryBuilder, $request) {
-        $totalOfRecords = $queryBuilder->select('COUNT(e.id)')->getQuery()->getSingleScalarResult();
+        $totalOfRecords = $queryBuilder->select('COUNT(e.id)')->groupBy('e.id')->getQuery()->getSingleScalarResult();
         $show = $request->get('pcg_show', 10);
         $page = $request->get('pcg_page', 1);
 
