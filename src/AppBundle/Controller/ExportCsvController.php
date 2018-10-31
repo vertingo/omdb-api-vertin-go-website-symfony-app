@@ -80,7 +80,7 @@ class ExportCsvController extends Controller
       if(isset($_FILES['csv']))
       {       
         //$dossier = 'C:/xampp/htdocs/Omdb_Api_Vertin_Go_Website/src/AppBundle/Resources/';
-        $dossier = 'https://omdbapi-app.herokuapp.com/uploads/';
+        $dossier = 'uploads/';
         $fichier = basename($_FILES['csv']['name']);
 
         $result = move_uploaded_file($_FILES['csv']['tmp_name'], $dossier . $fichier);
@@ -94,7 +94,7 @@ class ExportCsvController extends Controller
         // Import du fichier CSV 
         //fopen("C:/xampp/htdocs/Omdb_Api_Vertin_Go_Website/src/AppBundle/Resources/".$fichier, "r")
 
-        if(($handle = fopen("https://omdbapi-app.herokuapp.com/uploads/".$fichier, "r"))!==FALSE) 
+        if(($handle = fopen("uploads/".$fichier, "r"))!==FALSE) 
         { // Lecture du fichier, à adapter
             
             $data=array();
