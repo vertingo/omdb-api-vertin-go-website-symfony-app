@@ -4,11 +4,9 @@ namespace AppBundle\Controller;
 
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
-
 use Pagerfanta\Pagerfanta;
 use Pagerfanta\Adapter\DoctrineORMAdapter;
 use Pagerfanta\View\TwitterBootstrap3View;
-
 use AppBundle\Entity\Films;
 
 /**
@@ -27,18 +25,30 @@ class FilmsController extends Controller
 
         $em = $this->getDoctrine()->getManager();
         $queryBuilder = $em->getRepository('AppBundle:Films')->createQueryBuilder('e');
-
-        list($filterForm, $queryBuilder) = $this->filter($queryBuilder, $request);
-        list($films, $pagerHtml) = $this->paginator($queryBuilder, $request);
         
-        $totalOfRecordsString = $this->getTotalOfRecordsString($queryBuilder, $request);
+        list($filterForm, $queryBuilder) = $this->filter($queryBuilder, $request);
+        list($films, $pagerHtml) = $this->paginator($queryBuilder, $request,$user);
+        
+        $totalOfRecordsString = $this->getTotalOfRecordsString($queryBuilder, $request,$user);
 
-        return $this->render('films/index.html.twig', array(
+        if($user=="anon.")
+        {
+            return $this->render('films/index2.html.twig', array(
+                'films' => $films,
+                'pagerHtml' => $pagerHtml,
+                'filterForm' => $filterForm->createView(),
+                'totalOfRecordsString' => $totalOfRecordsString
+                ));
+        }
+        else
+        {
+            return $this->render('films/index.html.twig', array(
             'films' => $films,
             'pagerHtml' => $pagerHtml,
             'filterForm' => $filterForm->createView(),
             'totalOfRecordsString' => $totalOfRecordsString
-        ));
+            ));
+        }   
     }
 
     /**
@@ -91,11 +101,11 @@ class FilmsController extends Controller
     * Get results from paginator and get paginator view.
     *
     */
-    protected function paginator($queryBuilder, Request $request)
+    protected function paginator($queryBuilder, Request $request,$user)
     {
         //sorting
         $sortCol = $queryBuilder->getRootAlias().'.'.$request->get('pcg_sort_col', 'id');
-        $queryBuilder->orderBy($sortCol, $request->get('pcg_sort_order', 'desc'));
+        $queryBuilder->where('e.username=:username')->setParameter('username', ''.$user.'')->orderBy($sortCol, $request->get('pcg_sort_order', 'desc'));
         // Paginator
         $adapter = new DoctrineORMAdapter($queryBuilder);
         $pagerfanta = new Pagerfanta($adapter);
@@ -133,9 +143,10 @@ class FilmsController extends Controller
     
     /*
      * Calculates the total of records string
+     * 
      */
-    protected function getTotalOfRecordsString($queryBuilder, $request) {
-        $totalOfRecords = $queryBuilder->select('COUNT(e.id)')->groupBy('e.id')->getQuery()->getScalarResult();
+    protected function getTotalOfRecordsString($queryBuilder, $request,$user) {
+        $totalOfRecords = $queryBuilder->select('COUNT(e.id)')->where('e.username=:username')->setParameter('username', ''.$user.'')->groupBy('e.id')->getQuery()->getScalarResult();
 
         if($totalOfRecords==0)
         {
@@ -152,8 +163,9 @@ class FilmsController extends Controller
             $endRecord = $totalOfRecords;
         }
 
-        //$totalOfRecords
-        return "Showing $startRecord - $endRecord of Records.";
+         //var_dump($totalOfRecords);
+         //echo $totalOfRecords;
+        return "Showing $startRecord - $endRecord of  Records.";
     }
     
     
