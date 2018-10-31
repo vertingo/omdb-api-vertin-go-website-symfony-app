@@ -119,6 +119,8 @@ class ExportCsvController extends Controller
 
                   $Omdbapi = new Omdbapi(['tomatoes' => FALSE ,'plot' => 'full','apikey' => '63154a5b']);
                   $omdbapi_result = $Omdbapi->get_by_title($data[1]);
+
+                  $user = $this->get('security.token_storage')->getToken()->getUser();
                   
                   //update
                   if($films) 
@@ -260,6 +262,7 @@ class ExportCsvController extends Controller
                       $edit->setProduction($omdbapi_result["Production"]);
                       $edit->setWebsite($omdbapi_result["Website"]);
                       $edit->setReponse($omdbapi_result["Response"]);
+                      $edit->setUsername($user);
                         
                       $em->flush();
                   }
@@ -381,6 +384,7 @@ class ExportCsvController extends Controller
                       $website="N/A";
                     }
 
+                  
                      $row++;
                      for ($c = 0; $c < $num; $c++) {
                       $Document[$row] = array(
@@ -408,7 +412,8 @@ class ExportCsvController extends Controller
                         "Boxoffice" => $boxoffice,
                         "Production" => $omdbapi_result["Production"],
                         "Website" => $website,
-                        "Reponse" => $omdbapi_result["Response"]
+                        "Reponse" => $omdbapi_result["Response"],
+                        "Username" => $user
                       );
                     }
                 }             
@@ -462,6 +467,7 @@ class ExportCsvController extends Controller
           $Films->setProduction($doc["Production"]);
           $Films->setWebsite($doc["Website"]);
           $Films->setReponse($doc["Reponse"]);
+          $Films->setUsername($doc["Username"]);
           
           // Enregistrement de l'objet en vu de son écriture dans la base de données
           $em->persist($Films);

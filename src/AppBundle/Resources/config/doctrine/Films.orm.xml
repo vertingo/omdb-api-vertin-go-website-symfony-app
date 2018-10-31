@@ -29,5 +29,6 @@
     <field name="production" type="string" column="production" length="255"/>
     <field name="website" type="string" column="website" length="255"/>
     <field name="reponse" type="boolean" column="reponse" length="10"/>
+    <field name="username" type="string" column="username" length="50"/>
   </entity>
 </doctrine-mapping>

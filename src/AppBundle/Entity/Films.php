@@ -137,6 +137,11 @@ class Films
      */
     private $reponse;
 
+     /**
+     * @var string
+     */
+    private $username;
+
 
     /**
      * Get id
@@ -746,6 +751,30 @@ class Films
     public function getReponse()
     {
         return $this->reponse;
+    }
+
+    /**
+     * Set usernameFilm
+     *
+     * @param string $username
+     * 
+     * @return Films
+     */
+    public function setUsername($username)
+    {
+        $this->username = $username;
+
+        return $this;
+    }
+
+    /**
+     * Get usernameFilm
+     *
+     * @return string
+     */
+    public function getUsername()
+    {
+        return $this->username;
     }
 }
 

@@ -23,6 +23,8 @@ class FilmsController extends Controller
      */
     public function indexAction(Request $request)
     {
+        $user = $this->get('security.token_storage')->getToken()->getUser();
+
         $em = $this->getDoctrine()->getManager();
         $queryBuilder = $em->getRepository('AppBundle:Films')->createQueryBuilder('e');
 
@@ -36,7 +38,6 @@ class FilmsController extends Controller
             'pagerHtml' => $pagerHtml,
             'filterForm' => $filterForm->createView(),
             'totalOfRecordsString' => $totalOfRecordsString
-
         ));
     }
 
