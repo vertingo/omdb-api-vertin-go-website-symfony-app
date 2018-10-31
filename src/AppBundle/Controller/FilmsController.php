@@ -152,7 +152,7 @@ class FilmsController extends Controller
         }
 
         //$totalOfRecords
-        return "Showing $startRecord - $endRecord of  Records.";
+        return "Showing $startRecord - $endRecord of $totalOfRecords Records.";
     }
     
     
