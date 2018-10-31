@@ -13,7 +13,6 @@ use Symfony\Component\Form\FormBuilderInterface;
 use \DateTime;
 use Pagerfanta\Adapter\DoctrineORMAdapter;
 use Pagerfanta\View\TwitterBootstrap3View;
-//use AppBundle\Entity\Document;
 use AppBundle\Entity\CiqT;
 use AppBundle\Entity\operation_t;
 use AppBundle\Entity\Films;
@@ -79,8 +78,8 @@ class ExportCsvController extends Controller
 
       if(isset($_FILES['csv']))
       {       
-        //$dossier = 'C:/xampp/htdocs/Omdb_Api_Vertin_Go_Website/src/AppBundle/Resources/';
-        $dossier = $_SERVER["DOCUMENT_ROOT"].'/uploads/';
+        //$dossier = $_SERVER["DOCUMENT_ROOT"].'/Omdb_Api_Vertin_Go_Website/web/uploads/';
+        $dossier = $_SERVER["DOCUMENT_ROOT"].'/web/uploads/';
         $fichier = basename($_FILES['csv']['name']);
 
         $result = move_uploaded_file($_FILES['csv']['tmp_name'], $dossier . $fichier);
@@ -92,9 +91,9 @@ class ExportCsvController extends Controller
         //$path=$this->get('kernel')->getRootDir(); // Représente la ligne
 
         // Import du fichier CSV 
-        //fopen("C:/xampp/htdocs/Omdb_Api_Vertin_Go_Website/src/AppBundle/Resources/".$fichier, "r")
+        //fopen($_SERVER["DOCUMENT_ROOT"]."/Omdb_Api_Vertin_Go_Website/web/uploads/".$fichier, "r")
 
-        if(($handle = fopen($_SERVER["DOCUMENT_ROOT"]."/uploads/".$fichier, "r"))!==FALSE) 
+        if(($handle = fopen($_SERVER["DOCUMENT_ROOT"]."/web/uploads/".$fichier, "r"))!==FALSE) 
         { // Lecture du fichier, à adapter
             
             $data=array();

@@ -134,7 +134,13 @@ class FilmsController extends Controller
      * Calculates the total of records string
      */
     protected function getTotalOfRecordsString($queryBuilder, $request) {
-        $totalOfRecords = $queryBuilder->select('COUNT(e.id)')->groupBy('e.id')->getQuery()->getOneOrNullResult();
+        $totalOfRecords = $queryBuilder->select('COUNT(e.id)')->groupBy('e.id')->getQuery()->getScalarResult();
+
+        if($totalOfRecords==0)
+        {
+            $totalOfRecords=1;
+        }
+       
         $show = $request->get('pcg_show', 10);
         $page = $request->get('pcg_page', 1);
 
@@ -144,7 +150,9 @@ class FilmsController extends Controller
         if ($endRecord > $totalOfRecords) {
             $endRecord = $totalOfRecords;
         }
-        return "Showing $startRecord - $endRecord of $totalOfRecords Records.";
+
+        //$totalOfRecords
+        return "Showing $startRecord - $endRecord of  Records.";
     }
     
     
