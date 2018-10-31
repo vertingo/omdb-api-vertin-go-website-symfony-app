@@ -80,7 +80,7 @@ class ExportCsvController extends Controller
       {       
         //$dossier = $_SERVER["DOCUMENT_ROOT"].'/Omdb_Api_Vertin_Go_Website/web/uploads/';
         $path=$this->get('kernel')->getRootDir();
-        $dossier = $path.'/uploads/';
+        $dossier = $path.'/';
         $fichier = basename($_FILES['csv']['name']);
 
         $result = move_uploaded_file($_FILES['csv']['tmp_name'], $dossier . $fichier);
@@ -94,7 +94,7 @@ class ExportCsvController extends Controller
         // Import du fichier CSV 
         //fopen($_SERVER["DOCUMENT_ROOT"]."/Omdb_Api_Vertin_Go_Website/web/uploads/".$fichier, "r")
 
-        if(($handle = fopen($path."/uploads/".$fichier, "r"))!==FALSE) 
+        if(($handle = fopen($path."/".$fichier, "r"))!==FALSE) 
         { // Lecture du fichier, à adapter
             
             $data=array();
