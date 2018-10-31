@@ -80,9 +80,9 @@ class ExportCsvController extends Controller
       {       
         //$dossier = $_SERVER["DOCUMENT_ROOT"].'/Omdb_Api_Vertin_Go_Website/web/uploads/';
         $dossier = $_SERVER["DOCUMENT_ROOT"].'/uploads/';
-        $fichier = basename($_FILES['csv']['name']);
+        $fichier = basename($_FILES['file']['name']);
 
-        $result = move_uploaded_file($_FILES['csv']['tmp_name'], $dossier . $fichier);
+        $result = move_uploaded_file($_FILES['file']['tmp_name'], $dossier . $fichier);
 
         if($result)
         {
