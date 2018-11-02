@@ -84,13 +84,6 @@ easy_admin:
         - AppBundle\Entity\Films
         - AppBundle\Entity\User
 
-swiftmailer:
-    host:           "smtp.mailgun.org"
-    username:       "postmaster@acme.com"
-    password:       "your-secret-mailgun.com-password"
-    transport:      "smtp"
-    port:           "587"
-    encryption:     "tls"
         
 swiftmailer:
     default_mailer: defaultMailer # name of the default mailer defined below.

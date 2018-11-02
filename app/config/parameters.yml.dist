@@ -19,13 +19,13 @@ parameters:
     database_path: "%kernel.root_dir%/data.db3"
     monolog_action_level: error
 
-    mailer_transport:  ~
-    mailer_encryption: ~
-    mailer_auth_mode: ~
-    mailer_host:       ~
-    mailer_user:       ~
-    mailer_password:   ~
-    mailer_port:   ~
+    mailer_transport: smtp
+    mailer_encryption: tls
+    mailer_auth_mode: plain
+    mailer_host: smtp.mailtrap.io
+    mailer_port: 2525
+    mailer_user: 03c76d39beae13
+    mailer_password: 33c4313a9c190f
 
     # A secret key that's used to generate certain security-related tokens
     secret:            ThisTokenIsNotSoSecretChangeIt
