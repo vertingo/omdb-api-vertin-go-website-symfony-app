@@ -19,12 +19,13 @@ parameters:
     database_path: "%kernel.root_dir%/data.db3"
     monolog_action_level: error
 
-    mailer_transport:  smtp
-    mailer_host:       127.0.0.1
+    mailer_transport:  ~
+    mailer_encryption: ~
+    mailer_auth_mode: ~
+    mailer_host:       ~
     mailer_user:       ~
     mailer_password:   ~
     mailer_port:   ~
-    mailer_encryption: ~
 
     # A secret key that's used to generate certain security-related tokens
     secret:            ThisTokenIsNotSoSecretChangeIt
