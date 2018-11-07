@@ -1,5 +1,5 @@
 # 🌐 Projet Front-Back End + Api Omdbapi![App Progress Status](https://img.shields.io/badge/Status-Finished-0520b7.svg?style=plastic)
-============================================================================
+================================================================================
 L'idée serait de gérer une plateforme permettant aux utilisateurs de se créer une liste de films favoris à partir d'une barre de recherche mais également de pouvoir en visualiser une bande annonce, donner un avis, et exporter au format pdf cette liste!
 
 <center>Front-End</center>
