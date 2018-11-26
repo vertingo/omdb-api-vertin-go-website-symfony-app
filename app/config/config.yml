@@ -55,7 +55,6 @@ swiftmailer:
 twig:
     form_themes:
         - 'bootstrap_3_layout.html.twig'
-    # ...
 
 # app/config/config.yml
 fos_user:
@@ -63,17 +62,20 @@ fos_user:
     firewall_name: main
     user_class: AppBundle\Entity\User
     from_email:
-        address: "vertingo92@gmail.com"
-        sender_name: "testeur"
+        address: "admin@vertin-go.com"
+        sender_name: "Admin"
     service:
         mailer: fos_user.mailer.twig_swift
     registration:
         confirmation:
             enabled: true
             from_email:
-                address: vertingo92@gmail.com
-                sender_name: Admin du Tuto FOSUserBundle
-            template: 'email/registration.email.twig'
+                address: 84f33334a1-05e91d@inbox.mailtrap.io
+                sender_name: Admin VertinGo Website
+            template: '@FOSUser/Registration/email.txt.twig'
+    #resetting:
+        #email:
+            #template:   '@FOSUser/Resetting/email.txt.twig'
 
 services:
     fos_user.doctrine_registry:
@@ -137,7 +139,7 @@ azine_email:
     no_reply:             # Required
 
         # the no-reply email-address
-        email:                no-reply@example.com # Required
+        email:                admin@vertin-go.com # Required
 
         # the name to appear with the 'no-reply'-address.
         name:                 'notification daemon' # Required
@@ -188,7 +190,7 @@ azine_email:
     no_reply:         #     Required
 
         # the no-reply email-address
-        email:   admin@gmail.com 
+        email:   admin@vertin-go.com 
 
         # the name to appear with the 'no-reply'-address.
         name:   'notification daemon' # Required

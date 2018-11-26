@@ -5,7 +5,8 @@
     "autoload": {
         "psr-4": {
             "": "src/",
-            "aharen\\": "src/"
+            "aharen\\": "src/",
+            "AppBundle\\": "src/AppBundle"
 
         },
         "classmap": [

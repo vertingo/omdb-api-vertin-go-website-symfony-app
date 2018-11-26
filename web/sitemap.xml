@@ -1,0 +1,292 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
+
+
+<url>
+  <loc>https://omdbapi-app.herokuapp.com/films</loc>
+  <lastmod>2018-11-26T04:47:17+00:00</lastmod>
+  <priority>1.00</priority>
+</url>
+<url>
+  <loc>https://omdbapi-app.herokuapp.com/register/</loc>
+  <lastmod>2018-11-26T04:47:17+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://omdbapi-app.herokuapp.com/new</loc>
+  <lastmod>2018-11-26T04:47:17+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://omdbapi-app.herokuapp.com/films?pcg_sort_col=titreFilm&amp;pcg_sort_order=asc</loc>
+  <lastmod>2018-11-26T04:47:17+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://omdbapi-app.herokuapp.com/films?pcg_sort_col=annee&amp;pcg_sort_order=asc</loc>
+  <lastmod>2018-11-26T04:47:17+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://omdbapi-app.herokuapp.com/films?pcg_sort_col=classification&amp;pcg_sort_order=asc</loc>
+  <lastmod>2018-11-26T04:47:17+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://omdbapi-app.herokuapp.com/films?pcg_sort_col=sortie&amp;pcg_sort_order=asc</loc>
+  <lastmod>2018-11-26T04:47:17+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://omdbapi-app.herokuapp.com/films?pcg_sort_col=duree&amp;pcg_sort_order=asc</loc>
+  <lastmod>2018-11-26T04:47:17+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://omdbapi-app.herokuapp.com/films?pcg_sort_col=genre&amp;pcg_sort_order=asc</loc>
+  <lastmod>2018-11-26T04:47:17+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://omdbapi-app.herokuapp.com/films?pcg_sort_col=directeur&amp;pcg_sort_order=asc</loc>
+  <lastmod>2018-11-26T04:47:17+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://omdbapi-app.herokuapp.com/films?pcg_sort_col=scenariste&amp;pcg_sort_order=asc</loc>
+  <lastmod>2018-11-26T04:47:17+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://omdbapi-app.herokuapp.com/films?pcg_sort_col=acteurs&amp;pcg_sort_order=asc</loc>
+  <lastmod>2018-11-26T04:47:17+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://omdbapi-app.herokuapp.com/films?pcg_sort_col=synopsis&amp;pcg_sort_order=asc</loc>
+  <lastmod>2018-11-26T04:47:17+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://omdbapi-app.herokuapp.com/films?pcg_sort_col=langue&amp;pcg_sort_order=asc</loc>
+  <lastmod>2018-11-26T04:47:17+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://omdbapi-app.herokuapp.com/films?pcg_sort_col=nationalite&amp;pcg_sort_order=asc</loc>
+  <lastmod>2018-11-26T04:47:17+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://omdbapi-app.herokuapp.com/films?pcg_sort_col=recompense&amp;pcg_sort_order=asc</loc>
+  <lastmod>2018-11-26T04:47:17+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://omdbapi-app.herokuapp.com/films?pcg_sort_col=illustration&amp;pcg_sort_order=asc</loc>
+  <lastmod>2018-11-26T04:47:17+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://omdbapi-app.herokuapp.com/films?pcg_sort_col=notations&amp;pcg_sort_order=asc</loc>
+  <lastmod>2018-11-26T04:47:17+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://omdbapi-app.herokuapp.com/films?pcg_sort_col=metascore&amp;pcg_sort_order=asc</loc>
+  <lastmod>2018-11-26T04:47:17+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://omdbapi-app.herokuapp.com/films?pcg_sort_col=imdbNotation&amp;pcg_sort_order=asc</loc>
+  <lastmod>2018-11-26T04:47:17+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://omdbapi-app.herokuapp.com/films?pcg_sort_col=imdbVotes&amp;pcg_sort_order=asc</loc>
+  <lastmod>2018-11-26T04:47:17+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://omdbapi-app.herokuapp.com/films?pcg_sort_col=imdbId&amp;pcg_sort_order=asc</loc>
+  <lastmod>2018-11-26T04:47:17+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://omdbapi-app.herokuapp.com/films?pcg_sort_col=type&amp;pcg_sort_order=asc</loc>
+  <lastmod>2018-11-26T04:47:17+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://omdbapi-app.herokuapp.com/films?pcg_sort_col=dvd&amp;pcg_sort_order=asc</loc>
+  <lastmod>2018-11-26T04:47:17+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://omdbapi-app.herokuapp.com/films?pcg_sort_col=boxoffice&amp;pcg_sort_order=asc</loc>
+  <lastmod>2018-11-26T04:47:17+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://omdbapi-app.herokuapp.com/films?pcg_sort_col=production&amp;pcg_sort_order=asc</loc>
+  <lastmod>2018-11-26T04:47:17+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://omdbapi-app.herokuapp.com/films?pcg_sort_col=website&amp;pcg_sort_order=asc</loc>
+  <lastmod>2018-11-26T04:47:17+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://omdbapi-app.herokuapp.com/films?pcg_sort_col=reponse&amp;pcg_sort_order=asc</loc>
+  <lastmod>2018-11-26T04:47:17+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://omdbapi-app.herokuapp.com/films?pcg_sort_col=id&amp;pcg_sort_order=asc</loc>
+  <lastmod>2018-11-26T04:47:17+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://omdbapi-app.herokuapp.com/login</loc>
+  <lastmod>2018-11-26T04:47:17+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://omdbapi-app.herokuapp.com/films?pcg_sort_col=titreFilm&amp;pcg_sort_order=desc</loc>
+  <lastmod>2018-11-26T04:47:17+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://omdbapi-app.herokuapp.com/films?pcg_sort_col=annee&amp;pcg_sort_order=desc</loc>
+  <lastmod>2018-11-26T04:47:17+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://omdbapi-app.herokuapp.com/films?pcg_sort_col=classification&amp;pcg_sort_order=desc</loc>
+  <lastmod>2018-11-26T04:47:17+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://omdbapi-app.herokuapp.com/films?pcg_sort_col=sortie&amp;pcg_sort_order=desc</loc>
+  <lastmod>2018-11-26T04:47:17+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://omdbapi-app.herokuapp.com/films?pcg_sort_col=duree&amp;pcg_sort_order=desc</loc>
+  <lastmod>2018-11-26T04:47:17+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://omdbapi-app.herokuapp.com/films?pcg_sort_col=genre&amp;pcg_sort_order=desc</loc>
+  <lastmod>2018-11-26T04:47:17+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://omdbapi-app.herokuapp.com/films?pcg_sort_col=directeur&amp;pcg_sort_order=desc</loc>
+  <lastmod>2018-11-26T04:47:17+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://omdbapi-app.herokuapp.com/films?pcg_sort_col=scenariste&amp;pcg_sort_order=desc</loc>
+  <lastmod>2018-11-26T04:47:17+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://omdbapi-app.herokuapp.com/films?pcg_sort_col=acteurs&amp;pcg_sort_order=desc</loc>
+  <lastmod>2018-11-26T04:47:17+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://omdbapi-app.herokuapp.com/films?pcg_sort_col=synopsis&amp;pcg_sort_order=desc</loc>
+  <lastmod>2018-11-26T04:47:17+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://omdbapi-app.herokuapp.com/films?pcg_sort_col=langue&amp;pcg_sort_order=desc</loc>
+  <lastmod>2018-11-26T04:47:17+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://omdbapi-app.herokuapp.com/films?pcg_sort_col=nationalite&amp;pcg_sort_order=desc</loc>
+  <lastmod>2018-11-26T04:47:17+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://omdbapi-app.herokuapp.com/films?pcg_sort_col=recompense&amp;pcg_sort_order=desc</loc>
+  <lastmod>2018-11-26T04:47:17+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://omdbapi-app.herokuapp.com/films?pcg_sort_col=illustration&amp;pcg_sort_order=desc</loc>
+  <lastmod>2018-11-26T04:47:17+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://omdbapi-app.herokuapp.com/films?pcg_sort_col=notations&amp;pcg_sort_order=desc</loc>
+  <lastmod>2018-11-26T04:47:17+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://omdbapi-app.herokuapp.com/films?pcg_sort_col=metascore&amp;pcg_sort_order=desc</loc>
+  <lastmod>2018-11-26T04:47:17+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://omdbapi-app.herokuapp.com/films?pcg_sort_col=imdbNotation&amp;pcg_sort_order=desc</loc>
+  <lastmod>2018-11-26T04:47:17+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://omdbapi-app.herokuapp.com/films?pcg_sort_col=imdbVotes&amp;pcg_sort_order=desc</loc>
+  <lastmod>2018-11-26T04:47:17+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://omdbapi-app.herokuapp.com/films?pcg_sort_col=imdbId&amp;pcg_sort_order=desc</loc>
+  <lastmod>2018-11-26T04:47:17+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://omdbapi-app.herokuapp.com/films?pcg_sort_col=type&amp;pcg_sort_order=desc</loc>
+  <lastmod>2018-11-26T04:47:17+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://omdbapi-app.herokuapp.com/films?pcg_sort_col=dvd&amp;pcg_sort_order=desc</loc>
+  <lastmod>2018-11-26T04:47:17+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://omdbapi-app.herokuapp.com/films?pcg_sort_col=boxoffice&amp;pcg_sort_order=desc</loc>
+  <lastmod>2018-11-26T04:47:17+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://omdbapi-app.herokuapp.com/films?pcg_sort_col=production&amp;pcg_sort_order=desc</loc>
+  <lastmod>2018-11-26T04:47:17+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://omdbapi-app.herokuapp.com/films?pcg_sort_col=website&amp;pcg_sort_order=desc</loc>
+  <lastmod>2018-11-26T04:47:17+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://omdbapi-app.herokuapp.com/films?pcg_sort_col=reponse&amp;pcg_sort_order=desc</loc>
+  <lastmod>2018-11-26T04:47:17+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://omdbapi-app.herokuapp.com/films?pcg_sort_col=id&amp;pcg_sort_order=desc</loc>
+  <lastmod>2018-11-26T04:47:17+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+
+
+</urlset>
