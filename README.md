@@ -1,3 +1,4 @@
+![Image](https://raw.githubusercontent.com/vertingo/Easy_Admin_YouTube_Newsletter_Firebase/master/web/assets/images/github/vertin_go_website.jpg)
 # 🌐 Projet Front-Back End + Api Omdbapi![App Progress Status](https://img.shields.io/badge/Status-Finished-0520b7.svg?style=plastic)
 ================================================================================
 
