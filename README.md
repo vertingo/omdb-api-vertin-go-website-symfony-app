@@ -50,7 +50,7 @@ Accéder ensuite à la page de login:
 
 Pour importer une liste de films via un fichier csv il faut créer un fichier csv et écrire sur chaque ligne add:le_nom_de_votre_film (Vous pouvez trouver un exemple de fichier csv à la racine du projet: csv_omdbapi.csv)
 
-Partie Back-end
+Parti Back-end
 
 ```
 php bin/console fos:user:promote user ROLE_ADMIN 
