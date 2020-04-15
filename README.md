@@ -1,5 +1,14 @@
-Projet Front-Back End + Api Omdbapi
-======================================================================================================
+![Image](https://raw.githubusercontent.com/vertingo/Easy_Admin_YouTube_Newsletter_Firebase/master/web/assets/images/github/vertin_go_website.jpg)
+### 🌐 Apporter votre soutien au projet :heart: pour de futures évolutions!
+[![GitHub stars](https://img.shields.io/github/stars/vertingo/screenshott.svg?style=social&label=Star)](https://github.com/vertingo/Omdb_Api_Vertin_Go_Website) [![GitHub forks](https://img.shields.io/github/forks/vertingo/screenshott.svg?style=social&label=Fork)](https://github.com/vertingo/Omdb_Api_Vertin_Go_Website/fork) [![GitHub watchers](https://img.shields.io/github/watchers/vertingo/screenshott.svg?style=social&label=Watch)](https://github.com/vertingo/Omdb_Api_Vertin_Go_Website) [![GitHub followers](https://img.shields.io/github/followers/vertingo.svg?style=social&label=Follow)](https://github.com/vertingo)
+[![Twitter Follow](https://img.shields.io/twitter/follow/Vertin_Go.svg?style=social)](https://twitter.com/Vertin_Go)
+
+# 🌐 Projet Front-Back End + Api Omdbapi![App Progress Status](https://img.shields.io/badge/Status-Finished-0520b7.svg?style=plastic)
+================================================================================
+
+#### Deploy your own OMDB_Api project on Heroku!
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/vertingo/Omdb_Api_Vertin_Go_Website)
+
 L'idée serait de gérer une plateforme permettant aux utilisateurs de se créer une liste de films favoris à partir d'une barre de recherche mais également de pouvoir en visualiser une bande annonce, donner un avis, et exporter au format pdf cette liste!
 
 
@@ -77,8 +86,8 @@ php bin/console generate:doctrine:crud
 
 ================================================================================
 <p align="center">
-  <a href="https://www.youtube.com/channel/UC2g_-ipVjit6ZlACPWG4JvA?sub_confirmation=1"><img src="http://vertin-go.com/Fonctions_Annexes/annexes/pdt-page-de-telechargement/Android%20You%20Tube%20Data%20API/youtube2.png" width="400" height="250"/></a>
-  <a href="https://www.facebook.com/vertingo/"><img src="http://vertin-go.com/Fonctions_Annexes/annexes/pdt-page-de-telechargement/Android%20You%20Tube%20Data%20API/rejoins_nous.png" width="400" height="250"/></a>
+  <a href="https://www.youtube.com/channel/UC2g_-ipVjit6ZlACPWG4JvA?sub_confirmation=1"><img src="https://platform-media.herokuapp.com/assets/images/reseaux-sociaux/youtube2.png" width="400" height="250"/></a>
+  <a href="https://www.facebook.com/vertingo/"><img src="https://platform-media.herokuapp.com/assets/images/reseaux-sociaux/rejoins_nous.png" width="400" height="250"/></a>
 </p>
 
 
