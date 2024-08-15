@@ -2,17 +2,21 @@
 ### 🌐 Apporter votre soutien au projet :heart: pour de futures évolutions!
 [![GitHub stars](https://img.shields.io/github/stars/vertingo/screenshott.svg?style=social&label=Star)](https://github.com/vertingo/Omdb_Api_Vertin_Go_Website) [![GitHub forks](https://img.shields.io/github/forks/vertingo/screenshott.svg?style=social&label=Fork)](https://github.com/vertingo/Omdb_Api_Vertin_Go_Website/fork) [![GitHub watchers](https://img.shields.io/github/watchers/vertingo/screenshott.svg?style=social&label=Watch)](https://github.com/vertingo/Omdb_Api_Vertin_Go_Website) [![GitHub followers](https://img.shields.io/github/followers/vertingo.svg?style=social&label=Follow)](https://github.com/vertingo)
 [![Twitter Follow](https://img.shields.io/twitter/follow/Vertin_Go.svg?style=social)](https://twitter.com/Vertin_Go)
+[![Facebook](https://img.shields.io/badge/Facebook-vertingo-blue?style=social&logo=facebook)](https://www.facebook.com/vertingo)
+[![YouTube Subscribe](https://img.shields.io/youtube/channel/subscribers/UC2g_-ipVjit6ZlACPWG4JvA?style=social)](https://www.youtube.com/channel/UC2g_-ipVjit6ZlACPWG4JvA?sub_confirmation=1)
 
-# 🌐 Projet Front-Back End + Api Omdbapi![App Progress Status](https://img.shields.io/badge/Status-Finished-0520b7.svg?style=plastic)
-================================================================================
+# 🌐 Projet Front-Back End + Api Omdbapi
+![App Progress Status](https://img.shields.io/badge/Status-Finished-0520b7.svg?style=plastic)
+[![Download](https://img.shields.io/badge/Download-Repo-brightgreen)](https://github.com/vertingo/omdb-api-vertin-go-website-symfony-app/archive/refs/heads/main.zip)
+
+<!-- BEGIN LATEST DOWNLOAD BUTTON -->
+[![Download zip](https://custom-icon-badges.demolab.com/badge/-Download-blue?style=for-the-badge&logo=download&logoColor=white "Download zip")](https://github.com/vertingo/omdb-api-vertin-go-website-symfony-app/archive/1.0.2.zip)
+<!-- END LATEST DOWNLOAD BUTTON -->
 
 #### Deploy your own OMDB_Api project on Heroku!
 [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/vertingo/Omdb_Api_Vertin_Go_Website)
 
 L'idée serait de gérer une plateforme permettant aux utilisateurs de se créer une liste de films favoris à partir d'une barre de recherche mais également de pouvoir en visualiser une bande annonce, donner un avis, et exporter au format pdf cette liste!
-
-
- 
 
 <center>Front-End</center>
 <p align="center">
