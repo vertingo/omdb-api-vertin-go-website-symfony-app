@@ -75,7 +75,7 @@ aprés s'être réauthentifier sur la page de login:
 
 ```
 
-================================================================================
+===========================================================================
 
 Pour générer un crud sur une entité avec le Bundle Pektopara en 3 lignes de commandes:
 
@@ -88,7 +88,7 @@ php bin/console generate:doctrine:crud
 
 ```
 
-================================================================================
+===========================================================================
 <p align="center">
   <a href="https://www.youtube.com/channel/UC2g_-ipVjit6ZlACPWG4JvA?sub_confirmation=1"><img src="https://raw.githubusercontent.com/vertingo/easy-admin-youtube-newsletter-firebase/master/web/assets/images/reseaux-sociaux/youtube2.png" width="400" height="250"/></a>
   <a href="https://www.facebook.com/vertingo/"><img src="https://raw.githubusercontent.com/vertingo/easy-admin-youtube-newsletter-firebase/master/web/assets/images/reseaux-sociaux/rejoins_nous.png" width="400" height="250"/></a>
